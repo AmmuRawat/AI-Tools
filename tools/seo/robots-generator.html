@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robots.txt Generator - Multi-Tools Hub</title>
+    <meta name="description" content="Generate a robots.txt file for your website">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Tool-specific CSS -->
+    <link rel="stylesheet" href="../../assets/css/tools/seo/robots-generator.css">
+</head>
+<body>
+    <!-- Header will be dynamically loaded here -->
+    <div id="header-container"></div>
+
+    <main class="container mt-4">
+        <div class="tool-container">
+            <h1 class="text-center mb-4">Robots.txt Generator</h1>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Generate Robots.txt</h5>
+                            <div class="mb-3">
+                                <label for="websiteUrl" class="form-label">Website URL</label>
+                                <input type="url" class="form-control" id="websiteUrl" placeholder="https://example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="sitemapUrl" class="form-label">Sitemap URL</label>
+                                <input type="url" class="form-control" id="sitemapUrl" placeholder="https://example.com/sitemap.xml">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Disallow Rules</label>
+                                <div id="disallowRules">
+                                    <div class="input-group mb-2">
+                                        <input type="text" class="form-control" placeholder="/admin/">
+                                        <button class="btn btn-outline-danger" type="button" onclick="removeRule(this)">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <button class="btn btn-outline-primary btn-sm" onclick="addRule()">
+                                    <i class="fas fa-plus"></i> Add Rule
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <button id="generateBtn" class="btn btn-primary">
+                                    <i class="fas fa-robot me-2"></i>Generate Robots.txt
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Generated Robots.txt</h5>
+                            <div id="resultsContainer" class="d-none">
+                                <div class="mb-3">
+                                    <textarea id="robotsContent" class="form-control" rows="10" readonly></textarea>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button id="copyBtn" class="btn btn-outline-primary">
+                                        <i class="fas fa-copy me-2"></i>Copy to Clipboard
+                                    </button>
+                                    <button id="downloadBtn" class="btn btn-outline-success">
+                                        <i class="fas fa-download me-2"></i>Download
+                                    </button>
+                                </div>
+                            </div>
+                            <div id="loadingContainer" class="text-center d-none">
+                                <div class="spinner-border text-primary" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                                <p class="mt-2">Generating robots.txt...</p>
+                            </div>
+                            <div id="errorContainer" class="alert alert-danger d-none">
+                                <!-- Error message will be shown here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ad Section -->
+            <div class="ad-container text-center p-3 border rounded mt-4">
+                <p class="text-muted">Advertisement</p>
+            </div>
+
+            <!-- Tool Description -->
+            <div class="mt-4">
+                <h3>About This Tool</h3>
+                <p>Generate a robots.txt file for your website to control search engine crawlers. A robots.txt file tells search engines which pages or files they can or cannot request from your site.</p>
+                <h4>Features:</h4>
+                <ul>
+                    <li>Generate standard robots.txt file</li>
+                    <li>Add custom disallow rules</li>
+                    <li>Include sitemap reference</li>
+                    <li>Copy to clipboard</li>
+                    <li>Download as .txt file</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer will be dynamically loaded here -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../../assets/js/main.js"></script>
+    <!-- Tool-specific JS -->
+    <script src="../../assets/js/tools/seo/robots-generator.js"></script>
+</body>
+</html> 

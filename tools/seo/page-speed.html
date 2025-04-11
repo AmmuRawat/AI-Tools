@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Speed Checker - Multi-Tools Hub</title>
+    <meta name="description" content="Check your website's page speed and performance">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Tool-specific CSS -->
+    <link rel="stylesheet" href="../../assets/css/tools/seo/page-speed.css">
+</head>
+<body>
+    <!-- Header will be dynamically loaded here -->
+    <div id="header-container"></div>
+
+    <main class="container mt-4">
+        <div class="tool-container">
+            <h1 class="text-center mb-4">Page Speed Checker</h1>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Check Page Speed</h5>
+                            <div class="mb-3">
+                                <label for="websiteUrl" class="form-label">Website URL</label>
+                                <input type="url" class="form-control" id="websiteUrl" placeholder="https://example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="deviceType" class="form-label">Device Type</label>
+                                <select class="form-select" id="deviceType">
+                                    <option value="mobile">Mobile</option>
+                                    <option value="desktop">Desktop</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="location" class="form-label">Location</label>
+                                <select class="form-select" id="location">
+                                    <option value="us">United States</option>
+                                    <option value="eu">Europe</option>
+                                    <option value="asia">Asia</option>
+                                </select>
+                            </div>
+                            <div class="d-grid">
+                                <button id="checkBtn" class="btn btn-primary">
+                                    <i class="fas fa-tachometer-alt me-2"></i>Check Speed
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Results</h5>
+                            <div id="resultsContainer" class="d-none">
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h6>Performance Score: <span id="performanceScore" class="badge"></span></h6>
+                                        <h6>Load Time: <span id="loadTime">-</span></h6>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <h6>Performance Metrics</h6>
+                                    <table class="table table-striped" id="metricsTable">
+                                        <thead>
+                                            <tr>
+                                                <th>Metric</th>
+                                                <th>Score</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Metrics will be populated here -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="mb-3">
+                                    <h6>Recommendations</h6>
+                                    <div id="recommendations" class="list-group">
+                                        <!-- Recommendations will be populated here -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="loadingContainer" class="text-center d-none">
+                                <div class="spinner-border text-primary" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                                <p class="mt-2">Checking page speed...</p>
+                            </div>
+                            <div id="errorContainer" class="alert alert-danger d-none">
+                                <!-- Error message will be shown here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ad Section -->
+            <div class="ad-container text-center p-3 border rounded mt-4">
+                <p class="text-muted">Advertisement</p>
+            </div>
+
+            <!-- Tool Description -->
+            <div class="mt-4">
+                <h3>About This Tool</h3>
+                <p>Check your website's page speed and performance metrics. Get detailed insights and recommendations to improve your website's loading time and user experience.</p>
+                <h4>Features:</h4>
+                <ul>
+                    <li>Check page speed for mobile and desktop</li>
+                    <li>View detailed performance metrics</li>
+                    <li>Get improvement recommendations</li>
+                    <li>Test from different locations</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer will be dynamically loaded here -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../../assets/js/main.js"></script>
+    <!-- Tool-specific JS -->
+    <script src="../../assets/js/tools/seo/page-speed.js"></script>
+</body>
+</html> 

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Text Generator - Free Online Text Generation Tool</title>
+    <meta name="description" content="Free online tool to generate random text for testing, placeholder content, and more. Customize text length and type.">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/tools.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="mb-4">Random Text Generator</h1>
+                <p class="lead">Generate random text for testing, placeholder content, and more.</p>
+
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="textType" class="form-label">Text Type</label>
+                                <select class="form-select" id="textType">
+                                    <option value="lorem">Lorem Ipsum</option>
+                                    <option value="random">Random Words</option>
+                                    <option value="sentences">Random Sentences</option>
+                                    <option value="paragraphs">Random Paragraphs</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="textLength" class="form-label">Length</label>
+                                <input type="number" class="form-control" id="textLength" min="1" max="1000" value="100">
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="outputText" class="form-label">Generated Text</label>
+                            <textarea class="form-control" id="outputText" rows="10" placeholder="Your random text will appear here..." readonly></textarea>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-primary" id="generateBtn">
+                                <i class="fas fa-sync"></i> Generate
+                            </button>
+                            <button class="btn btn-info" id="copyBtn">
+                                <i class="fas fa-copy"></i> Copy
+                            </button>
+                            <button class="btn btn-secondary" id="clearBtn">
+                                <i class="fas fa-trash"></i> Clear
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">About Random Text Generator</h5>
+                        <p class="card-text">This tool helps you generate random text for various purposes, including testing, placeholder content, and design mockups. Choose from different text types and customize the length to suit your needs.</p>
+                        
+                        <h6 class="mt-3">Features:</h6>
+                        <ul>
+                            <li>Multiple text types (Lorem Ipsum, Random Words, Sentences, Paragraphs)</li>
+                            <li>Customizable text length</li>
+                            <li>Copy to clipboard</li>
+                            <li>Easy to use</li>
+                            <li>No registration required</li>
+                        </ul>
+
+                        <h6 class="mt-3">Common Use Cases:</h6>
+                        <ul>
+                            <li>Design mockups and prototypes</li>
+                            <li>Testing text layouts</li>
+                            <li>Placeholder content</li>
+                            <li>Content planning</li>
+                            <li>Writing exercises</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">How to Use</h5>
+                        <ol class="card-text">
+                            <li>Select the type of text you want to generate</li>
+                            <li>Set the desired length (words, sentences, or paragraphs)</li>
+                            <li>Click "Generate" to create random text</li>
+                            <li>Use "Copy" to copy the result to your clipboard</li>
+                            <li>Use "Clear" to reset the output</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Popular Text Tools</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="case-converter.html"><i class="fas fa-text-height"></i> Case Converter</a></li>
+                            <li><a href="word-counter.html"><i class="fas fa-calculator"></i> Word Counter</a></li>
+                            <li><a href="character-counter.html"><i class="fas fa-calculator"></i> Character Counter</a></li>
+                            <li><a href="plagiarism-checker.html"><i class="fas fa-search"></i> Plagiarism Checker</a></li>
+                            <li><a href="grammar-checker.html"><i class="fas fa-check-double"></i> Grammar Checker</a></li>
+                            <li><a href="text-to-speech.html"><i class="fas fa-volume-up"></i> Text to Speech</a></li>
+                            <li><a href="speech-to-text.html"><i class="fas fa-microphone"></i> Speech to Text</a></li>
+                            <li><a href="url-encoder.html"><i class="fas fa-link"></i> URL Encoder</a></li>
+                            <li><a href="fancy-text.html"><i class="fas fa-font"></i> Fancy Text</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/header.js"></script>
+    <script src="../../assets/js/footer.js"></script>
+    <script src="../../assets/js/tools/text/random-text.js"></script>
+</body>
+</html> 

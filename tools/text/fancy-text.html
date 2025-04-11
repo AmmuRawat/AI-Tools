@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fancy Text Generator - Free Online Stylish Text Tool</title>
+    <meta name="description" content="Free online tool to generate fancy text styles. Create stylish text for social media, gaming, and more with various font styles and effects.">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/tools.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="mb-4">Fancy Text Generator</h1>
+                <p class="lead">Create stylish and unique text styles for social media and gaming.</p>
+
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="inputText" class="form-label">Enter your text</label>
+                            <textarea class="form-control" id="inputText" rows="3" placeholder="Type or paste your text here..."></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Text Styles</label>
+                            <div class="row g-2" id="styleButtons">
+                                <!-- Style buttons will be added here dynamically -->
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="outputText" class="form-label">Generated Text</label>
+                            <textarea class="form-control" id="outputText" rows="3" placeholder="Your fancy text will appear here..." readonly></textarea>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-primary" id="copyBtn">
+                                <i class="fas fa-copy"></i> Copy Text
+                            </button>
+                            <button class="btn btn-secondary" id="clearBtn">
+                                <i class="fas fa-trash"></i> Clear
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">About Fancy Text Generator</h5>
+                        <p class="card-text">This tool helps you create stylish and unique text styles for social media, gaming, and other platforms. Choose from various font styles and effects to make your text stand out.</p>
+                        
+                        <h6 class="mt-3">Features:</h6>
+                        <ul>
+                            <li>Multiple text styles</li>
+                            <li>Real-time preview</li>
+                            <li>Copy to clipboard</li>
+                            <li>Easy to use</li>
+                            <li>No registration required</li>
+                        </ul>
+
+                        <h6 class="mt-3">Common Use Cases:</h6>
+                        <ul>
+                            <li>Social media bios and posts</li>
+                            <li>Gaming usernames</li>
+                            <li>Creative writing</li>
+                            <li>Online profiles</li>
+                            <li>Artistic projects</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">How to Use</h5>
+                        <ol class="card-text">
+                            <li>Enter your text in the input box</li>
+                            <li>Click on a style button to generate fancy text</li>
+                            <li>Use "Copy Text" to copy the result to your clipboard</li>
+                            <li>Use "Clear" to reset the input and output</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Popular Text Tools</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="case-converter.html"><i class="fas fa-text-height"></i> Case Converter</a></li>
+                            <li><a href="word-counter.html"><i class="fas fa-calculator"></i> Word Counter</a></li>
+                            <li><a href="character-counter.html"><i class="fas fa-calculator"></i> Character Counter</a></li>
+                            <li><a href="plagiarism-checker.html"><i class="fas fa-search"></i> Plagiarism Checker</a></li>
+                            <li><a href="grammar-checker.html"><i class="fas fa-check-double"></i> Grammar Checker</a></li>
+                            <li><a href="text-to-speech.html"><i class="fas fa-volume-up"></i> Text to Speech</a></li>
+                            <li><a href="speech-to-text.html"><i class="fas fa-microphone"></i> Speech to Text</a></li>
+                            <li><a href="url-encoder-decoder.html"><i class="fas fa-link"></i> URL Encoder/Decoder</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/header.js"></script>
+    <script src="../../assets/js/footer.js"></script>
+    <script src="../../assets/js/tools/text/fancy-text.js"></script>
+</body>
+</html> 

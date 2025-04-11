@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator - Multi-Tools Hub</title>
+    <meta name="description" content="Generate QR codes for URLs, text, and more">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Tool-specific CSS -->
+    <link rel="stylesheet" href="../../assets/css/tools/image/qr-code-generator.css">
+</head>
+<body>
+    <!-- Header will be dynamically loaded here -->
+    <div id="header-container"></div>
+
+    <main class="container mt-4">
+        <div class="tool-container">
+            <h1 class="text-center mb-4">QR Code Generator</h1>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">QR Code Settings</h5>
+                            <div class="mb-3">
+                                <label for="contentType" class="form-label">Content Type</label>
+                                <select class="form-select" id="contentType">
+                                    <option value="url">URL</option>
+                                    <option value="text">Text</option>
+                                    <option value="email">Email</option>
+                                    <option value="phone">Phone Number</option>
+                                    <option value="wifi">WiFi</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contentInput" class="form-label">Content</label>
+                                <input type="text" class="form-control" id="contentInput" placeholder="Enter content">
+                            </div>
+                            <div class="mb-3">
+                                <label for="sizeInput" class="form-label">Size (px)</label>
+                                <input type="number" class="form-control" id="sizeInput" min="100" max="1000" value="300">
+                            </div>
+                            <div class="mb-3">
+                                <label for="errorLevel" class="form-label">Error Correction Level</label>
+                                <select class="form-select" id="errorLevel">
+                                    <option value="L">Low (7%)</option>
+                                    <option value="M">Medium (15%)</option>
+                                    <option value="Q">Quartile (25%)</option>
+                                    <option value="H">High (30%)</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="colorInput" class="form-label">Color</label>
+                                <input type="color" class="form-control form-control-color" id="colorInput" value="#000000">
+                            </div>
+                            <div class="mb-3">
+                                <label for="bgColorInput" class="form-label">Background Color</label>
+                                <input type="color" class="form-control form-control-color" id="bgColorInput" value="#ffffff">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Generated QR Code</h5>
+                            <div class="result-container mb-3">
+                                <canvas id="qrCanvas" class="img-fluid"></canvas>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button id="generateBtn" class="btn btn-primary">
+                                    <i class="fas fa-qrcode me-2"></i>Generate QR Code
+                                </button>
+                                <button id="downloadBtn" class="btn btn-success" disabled>
+                                    <i class="fas fa-download me-2"></i>Download QR Code
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ad Section -->
+            <div class="ad-container text-center p-3 border rounded mt-4">
+                <p class="text-muted">Advertisement</p>
+            </div>
+
+            <!-- Tool Description -->
+            <div class="mt-4">
+                <h3>About This Tool</h3>
+                <p>Generate QR codes for various types of content including URLs, text, email addresses, phone numbers, and WiFi credentials. Customize the appearance with different colors and sizes.</p>
+                <h4>Features:</h4>
+                <ul>
+                    <li>Generate QR codes for multiple content types</li>
+                    <li>Customizable size and colors</li>
+                    <li>Adjustable error correction level</li>
+                    <li>Preview before download</li>
+                    <li>Download QR codes as images</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer will be dynamically loaded here -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- QRCode.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../../assets/js/main.js"></script>
+    <!-- Tool-specific JS -->
+    <script src="../../assets/js/tools/image/qr-code-generator.js"></script>
+</body>
+</html> 

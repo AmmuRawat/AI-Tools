@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Speech - Free Online Text to Speech Converter</title>
+    <meta name="description" content="Free online tool to convert text to speech. Choose from multiple voices and languages. Download audio files in MP3 format.">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/tools.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="mb-4">Text to Speech</h1>
+                <p class="lead">Convert your text to natural-sounding speech.</p>
+
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="inputText" class="form-label">Enter your text</label>
+                            <textarea class="form-control" id="inputText" rows="10" placeholder="Type or paste your text here..."></textarea>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="voiceSelect" class="form-label">Voice</label>
+                                <select class="form-select" id="voiceSelect">
+                                    <option value="en-US">English (US)</option>
+                                    <option value="en-GB">English (UK)</option>
+                                    <option value="es-ES">Spanish</option>
+                                    <option value="fr-FR">French</option>
+                                    <option value="de-DE">German</option>
+                                    <option value="it-IT">Italian</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="rateSelect" class="form-label">Speech Rate</label>
+                                <select class="form-select" id="rateSelect">
+                                    <option value="0.8">Slow</option>
+                                    <option value="1.0" selected>Normal</option>
+                                    <option value="1.2">Fast</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="pitchSelect" class="form-label">Pitch</label>
+                                <select class="form-select" id="pitchSelect">
+                                    <option value="0.8">Low</option>
+                                    <option value="1.0" selected>Normal</option>
+                                    <option value="1.2">High</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="volumeSelect" class="form-label">Volume</label>
+                                <select class="form-select" id="volumeSelect">
+                                    <option value="0.5">Quiet</option>
+                                    <option value="1.0" selected>Normal</option>
+                                    <option value="1.5">Loud</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-primary" id="speakBtn">
+                                <i class="fas fa-play"></i> Speak
+                            </button>
+                            <button class="btn btn-secondary" id="pauseBtn" disabled>
+                                <i class="fas fa-pause"></i> Pause
+                            </button>
+                            <button class="btn btn-secondary" id="resumeBtn" disabled>
+                                <i class="fas fa-play"></i> Resume
+                            </button>
+                            <button class="btn btn-danger" id="stopBtn" disabled>
+                                <i class="fas fa-stop"></i> Stop
+                            </button>
+                            <button class="btn btn-success" id="downloadBtn" disabled>
+                                <i class="fas fa-download"></i> Download
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">About Text to Speech</h5>
+                        <p class="card-text">This tool converts your text into natural-sounding speech. You can customize the voice, speech rate, pitch, and volume to create the perfect audio output.</p>
+                        
+                        <h6 class="mt-3">Features:</h6>
+                        <ul>
+                            <li>Multiple voice options</li>
+                            <li>Adjustable speech rate</li>
+                            <li>Customizable pitch and volume</li>
+                            <li>Real-time playback</li>
+                            <li>Download audio files</li>
+                            <li>Support for multiple languages</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">How to Use</h5>
+                        <ol class="card-text">
+                            <li>Enter or paste your text</li>
+                            <li>Select your preferred voice and settings</li>
+                            <li>Click "Speak" to start playback</li>
+                            <li>Use pause/resume/stop controls</li>
+                            <li>Download the audio file if needed</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Popular Text Tools</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="case-converter.html"><i class="fas fa-text-height"></i> Case Converter</a></li>
+                            <li><a href="word-counter.html"><i class="fas fa-calculator"></i> Word Counter</a></li>
+                            <li><a href="character-counter.html"><i class="fas fa-calculator"></i> Character Counter</a></li>
+                            <li><a href="plagiarism-checker.html"><i class="fas fa-search"></i> Plagiarism Checker</a></li>
+                            <li><a href="grammar-checker.html"><i class="fas fa-check-double"></i> Grammar Checker</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/header.js"></script>
+    <script src="../../assets/js/footer.js"></script>
+    <script src="../../assets/js/tools/text/text-to-speech.js"></script>
+</body>
+</html> 

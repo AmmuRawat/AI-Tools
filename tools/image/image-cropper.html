@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Cropper - Multi-Tools Hub</title>
+    <meta name="description" content="Crop images to any size and aspect ratio">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Cropper.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Tool-specific CSS -->
+    <link rel="stylesheet" href="../../assets/css/tools/image/image-cropper.css">
+</head>
+<body>
+    <!-- Header will be dynamically loaded here -->
+    <div id="header-container"></div>
+
+    <main class="container mt-4">
+        <div class="tool-container">
+            <h1 class="text-center mb-4">Image Cropper</h1>
+            
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Upload & Crop Image</h5>
+                            <div class="mb-3">
+                                <label for="imageInput" class="form-label">Select an image file</label>
+                                <input class="form-control" type="file" id="imageInput" accept="image/*">
+                            </div>
+                            <div class="cropper-container mb-3">
+                                <img id="imagePreview" class="img-fluid" alt="Preview">
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="aspectRatio" class="form-label">Aspect Ratio</label>
+                                    <select class="form-select" id="aspectRatio">
+                                        <option value="free">Free</option>
+                                        <option value="1:1">1:1 (Square)</option>
+                                        <option value="4:3">4:3</option>
+                                        <option value="16:9">16:9</option>
+                                        <option value="3:2">3:2</option>
+                                        <option value="2:3">2:3</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="rotation" class="form-label">Rotation</label>
+                                    <input type="range" class="form-range" id="rotation" min="0" max="360" value="0">
+                                    <div class="text-center" id="rotationValue">0°</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Cropped Image</h5>
+                            <div class="result-container mb-3">
+                                <img id="resultImage" class="img-fluid d-none" alt="Result">
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button id="cropBtn" class="btn btn-primary" disabled>
+                                    <i class="fas fa-crop me-2"></i>Crop Image
+                                </button>
+                                <button id="downloadBtn" class="btn btn-success" disabled>
+                                    <i class="fas fa-download me-2"></i>Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ad Section -->
+            <div class="ad-container text-center p-3 border rounded mt-4">
+                <p class="text-muted">Advertisement</p>
+            </div>
+
+            <!-- Tool Description -->
+            <div class="mt-4">
+                <h3>About This Tool</h3>
+                <p>Crop your images to any size and aspect ratio. Perfect for creating profile pictures, thumbnails, or preparing images for social media.</p>
+                <h4>Features:</h4>
+                <ul>
+                    <li>Crop images to any size</li>
+                    <li>Maintain specific aspect ratios</li>
+                    <li>Rotate images</li>
+                    <li>Preview before download</li>
+                    <li>Download cropped image</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer will be dynamically loaded here -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Cropper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../../assets/js/main.js"></script>
+    <!-- Tool-specific JS -->
+    <script src="../../assets/js/tools/image/image-cropper.js"></script>
+</body>
+</html> 

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap Generator - Multi-Tools Hub</title>
+    <meta name="description" content="Generate XML sitemaps for your website">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Tool-specific CSS -->
+    <link rel="stylesheet" href="../../assets/css/tools/seo/sitemap-generator.css">
+</head>
+<body>
+    <!-- Header will be dynamically loaded here -->
+    <div id="header-container"></div>
+
+    <main class="container mt-4">
+        <div class="tool-container">
+            <h1 class="text-center mb-4">Sitemap Generator</h1>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Website Information</h5>
+                            <div class="mb-3">
+                                <label for="websiteUrl" class="form-label">Website URL</label>
+                                <input type="url" class="form-control" id="websiteUrl" placeholder="https://example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="changeFreq" class="form-label">Default Change Frequency</label>
+                                <select class="form-select" id="changeFreq">
+                                    <option value="always">Always</option>
+                                    <option value="hourly">Hourly</option>
+                                    <option value="daily">Daily</option>
+                                    <option value="weekly">Weekly</option>
+                                    <option value="monthly">Monthly</option>
+                                    <option value="yearly">Yearly</option>
+                                    <option value="never">Never</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="priority" class="form-label">Default Priority</label>
+                                <select class="form-select" id="priority">
+                                    <option value="1.0">1.0 (Highest)</option>
+                                    <option value="0.9">0.9</option>
+                                    <option value="0.8">0.8</option>
+                                    <option value="0.7">0.7</option>
+                                    <option value="0.6">0.6</option>
+                                    <option value="0.5">0.5 (Default)</option>
+                                    <option value="0.4">0.4</option>
+                                    <option value="0.3">0.3</option>
+                                    <option value="0.2">0.2</option>
+                                    <option value="0.1">0.1 (Lowest)</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="excludePatterns" class="form-label">Exclude Patterns (one per line)</label>
+                                <textarea class="form-control" id="excludePatterns" rows="3" placeholder="*.jpg&#10;*.pdf&#10;/admin/*"></textarea>
+                            </div>
+                            <div class="d-grid">
+                                <button id="generateBtn" class="btn btn-primary">
+                                    <i class="fas fa-sitemap me-2"></i>Generate Sitemap
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Generated Sitemap</h5>
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h6>Total URLs: <span id="totalUrls">0</span></h6>
+                                    <h6>File Size: <span id="fileSize">0 KB</span></h6>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="sitemapOutput" class="form-label">XML Sitemap</label>
+                                <textarea class="form-control" id="sitemapOutput" rows="10" readonly></textarea>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button id="copyBtn" class="btn btn-primary">
+                                    <i class="fas fa-copy me-2"></i>Copy to Clipboard
+                                </button>
+                                <button id="downloadBtn" class="btn btn-success">
+                                    <i class="fas fa-download me-2"></i>Download Sitemap
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ad Section -->
+            <div class="ad-container text-center p-3 border rounded mt-4">
+                <p class="text-muted">Advertisement</p>
+            </div>
+
+            <!-- Tool Description -->
+            <div class="mt-4">
+                <h3>About This Tool</h3>
+                <p>Generate XML sitemaps for your website to help search engines discover and index your pages. A sitemap is a file that lists all the important pages of your website.</p>
+                <h4>Features:</h4>
+                <ul>
+                    <li>Generate XML sitemaps automatically</li>
+                    <li>Customize change frequency and priority</li>
+                    <li>Exclude specific URL patterns</li>
+                    <li>Preview generated sitemap</li>
+                    <li>Download or copy sitemap XML</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer will be dynamically loaded here -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../../assets/js/main.js"></script>
+    <!-- Tool-specific JS -->
+    <script src="../../assets/js/tools/seo/sitemap-generator.js"></script>
+</body>
+</html> 

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Encoder/Decoder - Free Online URL Encoding Tool</title>
+    <meta name="description" content="Free online tool to encode and decode URLs. Convert special characters to URL-safe format and vice versa.">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/tools.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="mb-4">URL Encoder/Decoder</h1>
+                <p class="lead">Encode or decode URLs and special characters.</p>
+
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="inputText" class="form-label">Enter your text</label>
+                            <textarea class="form-control" id="inputText" rows="5" placeholder="Type or paste your text here..."></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="outputText" class="form-label">Result</label>
+                            <textarea class="form-control" id="outputText" rows="5" placeholder="Encoded or decoded text will appear here..." readonly></textarea>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-primary" id="encodeBtn">
+                                <i class="fas fa-lock"></i> Encode
+                            </button>
+                            <button class="btn btn-success" id="decodeBtn">
+                                <i class="fas fa-unlock"></i> Decode
+                            </button>
+                            <button class="btn btn-secondary" id="clearBtn">
+                                <i class="fas fa-trash"></i> Clear
+                            </button>
+                            <button class="btn btn-info" id="copyBtn">
+                                <i class="fas fa-copy"></i> Copy
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">About URL Encoder/Decoder</h5>
+                        <p class="card-text">This tool helps you encode or decode URLs and special characters. URL encoding converts special characters to a format that can be safely transmitted over the internet, while decoding converts them back to their original form.</p>
+                        
+                        <h6 class="mt-3">Features:</h6>
+                        <ul>
+                            <li>URL encoding and decoding</li>
+                            <li>Special character handling</li>
+                            <li>Real-time conversion</li>
+                            <li>Copy to clipboard</li>
+                            <li>Clear input/output</li>
+                        </ul>
+
+                        <h6 class="mt-3">Common Use Cases:</h6>
+                        <ul>
+                            <li>Encoding URLs with special characters</li>
+                            <li>Decoding encoded URLs</li>
+                            <li>Handling query parameters</li>
+                            <li>Processing form data</li>
+                            <li>Working with API endpoints</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">How to Use</h5>
+                        <ol class="card-text">
+                            <li>Enter or paste your text in the input box</li>
+                            <li>Click "Encode" to convert special characters to URL-safe format</li>
+                            <li>Click "Decode" to convert encoded text back to its original form</li>
+                            <li>Use "Copy" to copy the result to your clipboard</li>
+                            <li>Use "Clear" to reset both input and output</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Popular Text Tools</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="case-converter.html"><i class="fas fa-text-height"></i> Case Converter</a></li>
+                            <li><a href="word-counter.html"><i class="fas fa-calculator"></i> Word Counter</a></li>
+                            <li><a href="character-counter.html"><i class="fas fa-calculator"></i> Character Counter</a></li>
+                            <li><a href="plagiarism-checker.html"><i class="fas fa-search"></i> Plagiarism Checker</a></li>
+                            <li><a href="grammar-checker.html"><i class="fas fa-check-double"></i> Grammar Checker</a></li>
+                            <li><a href="text-to-speech.html"><i class="fas fa-volume-up"></i> Text to Speech</a></li>
+                            <li><a href="speech-to-text.html"><i class="fas fa-microphone"></i> Speech to Text</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/header.js"></script>
+    <script src="../../assets/js/footer.js"></script>
+    <script src="../../assets/js/tools/text/url-encoder-decoder.js"></script>
+</body>
+</html> 

@@ -1,0 +1,119 @@
+/* Global Styles */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --background-color: #f8f9fa;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+}
+
+/* Header Styles */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Tool Card Styles */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Search Bar Styles */
+.input-group {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.input-group .form-control {
+    border-right: none;
+}
+
+.input-group .btn {
+    border-left: none;
+}
+
+/* Category Buttons */
+.category-btn {
+    margin: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.category-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+footer {
+    margin-top: auto;
+}
+
+.social-links a {
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Ad Container Styles */
+.ad-container {
+    background-color: #f8f9fa;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tool Page Styles */
+.tool-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Loading Animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(0,0,0,.1);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+} 

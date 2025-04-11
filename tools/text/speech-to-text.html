@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech to Text - Free Online Speech Recognition Tool</title>
+    <meta name="description" content="Free online tool to convert speech to text. Use your microphone to dictate text. Supports multiple languages and real-time transcription.">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/tools.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="mb-4">Speech to Text</h1>
+                <p class="lead">Convert your speech to text in real-time.</p>
+
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="languageSelect" class="form-label">Language</label>
+                            <select class="form-select" id="languageSelect">
+                                <option value="en-US">English (US)</option>
+                                <option value="en-GB">English (UK)</option>
+                                <option value="es-ES">Spanish</option>
+                                <option value="fr-FR">French</option>
+                                <option value="de-DE">German</option>
+                                <option value="it-IT">Italian</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="outputText" class="form-label">Transcribed Text</label>
+                            <textarea class="form-control" id="outputText" rows="10" placeholder="Your transcribed text will appear here..." readonly></textarea>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-primary" id="startBtn">
+                                <i class="fas fa-microphone"></i> Start Recording
+                            </button>
+                            <button class="btn btn-danger" id="stopBtn" disabled>
+                                <i class="fas fa-stop"></i> Stop Recording
+                            </button>
+                            <button class="btn btn-secondary" id="clearBtn">
+                                <i class="fas fa-trash"></i> Clear Text
+                            </button>
+                            <button class="btn btn-success" id="copyBtn">
+                                <i class="fas fa-copy"></i> Copy Text
+                            </button>
+                        </div>
+
+                        <div class="mt-3">
+                            <div class="alert alert-info" id="statusMessage" style="display: none;">
+                                <i class="fas fa-info-circle"></i> <span id="statusText">Ready to start recording</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">About Speech to Text</h5>
+                        <p class="card-text">This tool converts your speech into text in real-time. It uses your device's microphone and supports multiple languages for accurate transcription.</p>
+                        
+                        <h6 class="mt-3">Features:</h6>
+                        <ul>
+                            <li>Real-time speech recognition</li>
+                            <li>Multiple language support</li>
+                            <li>Easy-to-use interface</li>
+                            <li>Copy to clipboard</li>
+                            <li>Clear text option</li>
+                            <li>Status indicators</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">How to Use</h5>
+                        <ol class="card-text">
+                            <li>Select your language</li>
+                            <li>Click "Start Recording"</li>
+                            <li>Allow microphone access when prompted</li>
+                            <li>Start speaking</li>
+                            <li>Click "Stop Recording" when done</li>
+                            <li>Copy or clear the text as needed</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Popular Text Tools</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="case-converter.html"><i class="fas fa-text-height"></i> Case Converter</a></li>
+                            <li><a href="word-counter.html"><i class="fas fa-calculator"></i> Word Counter</a></li>
+                            <li><a href="character-counter.html"><i class="fas fa-calculator"></i> Character Counter</a></li>
+                            <li><a href="plagiarism-checker.html"><i class="fas fa-search"></i> Plagiarism Checker</a></li>
+                            <li><a href="grammar-checker.html"><i class="fas fa-check-double"></i> Grammar Checker</a></li>
+                            <li><a href="text-to-speech.html"><i class="fas fa-volume-up"></i> Text to Speech</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/header.js"></script>
+    <script src="../../assets/js/footer.js"></script>
+    <script src="../../assets/js/tools/text/speech-to-text.js"></script>
+</body>
+</html> 

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile-Friendly Checker - Multi-Tools Hub</title>
+    <meta name="description" content="Check if your website is mobile-friendly">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Tool-specific CSS -->
+    <link rel="stylesheet" href="../../assets/css/tools/seo/mobile-friendly.css">
+</head>
+<body>
+    <!-- Header will be dynamically loaded here -->
+    <div id="header-container"></div>
+
+    <main class="container mt-4">
+        <div class="tool-container">
+            <h1 class="text-center mb-4">Mobile-Friendly Checker</h1>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Check Mobile-Friendliness</h5>
+                            <div class="mb-3">
+                                <label for="websiteUrl" class="form-label">Website URL</label>
+                                <input type="url" class="form-control" id="websiteUrl" placeholder="https://example.com">
+                            </div>
+                            <div class="d-grid">
+                                <button id="checkBtn" class="btn btn-primary">
+                                    <i class="fas fa-mobile-alt me-2"></i>Check Mobile-Friendliness
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Results</h5>
+                            <div id="resultsContainer" class="d-none">
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h6>Mobile-Friendly Status: <span id="mobileStatus" class="badge"></span></h6>
+                                        <h6>Page Load Time: <span id="loadTime">-</span></h6>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <h6>Issues Found</h6>
+                                    <div id="issuesList" class="list-group">
+                                        <!-- Issues will be populated here -->
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <h6>Mobile View</h6>
+                                    <div id="mobilePreview" class="mobile-preview">
+                                        <!-- Mobile preview will be shown here -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="loadingContainer" class="text-center d-none">
+                                <div class="spinner-border text-primary" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                                <p class="mt-2">Checking mobile-friendliness...</p>
+                            </div>
+                            <div id="errorContainer" class="alert alert-danger d-none">
+                                <!-- Error message will be shown here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ad Section -->
+            <div class="ad-container text-center p-3 border rounded mt-4">
+                <p class="text-muted">Advertisement</p>
+            </div>
+
+            <!-- Tool Description -->
+            <div class="mt-4">
+                <h3>About This Tool</h3>
+                <p>Check if your website is mobile-friendly and get recommendations for improvements. Mobile-friendliness is crucial for both user experience and search engine rankings.</p>
+                <h4>Features:</h4>
+                <ul>
+                    <li>Check mobile-friendliness status</li>
+                    <li>View mobile preview of your website</li>
+                    <li>Get detailed recommendations</li>
+                    <li>Analyze page load time</li>
+                    <li>Identify mobile-specific issues</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer will be dynamically loaded here -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../../assets/js/main.js"></script>
+    <!-- Tool-specific JS -->
+    <script src="../../assets/js/tools/seo/mobile-friendly.js"></script>
+</body>
+</html> 
