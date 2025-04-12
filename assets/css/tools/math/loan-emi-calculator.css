@@ -1,0 +1,142 @@
+.loan-emi-tool {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.loan-emi-tool .card {
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.loan-emi-tool .card-body {
+    padding: 2rem;
+}
+
+.loan-emi-tool .form-label {
+    font-weight: 600;
+    color: #333;
+}
+
+.loan-emi-tool .input-group {
+    margin-bottom: 1rem;
+}
+
+.loan-emi-tool .input-group-text {
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+}
+
+.loan-emi-tool .result-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.loan-emi-tool .result-item {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.loan-emi-tool .result-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.loan-emi-tool .result-value {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.loan-emi-tool .payment-schedule {
+    margin-top: 2rem;
+}
+
+.loan-emi-tool .table {
+    margin-bottom: 0;
+}
+
+.loan-emi-tool .table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+.loan-emi-tool .chart-container {
+    height: 300px;
+    margin-top: 1rem;
+}
+
+.loan-emi-tool .history-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.loan-emi-tool .history-item {
+    padding: 0.5rem;
+    border-bottom: 1px solid #dee2e6;
+    cursor: pointer;
+}
+
+.loan-emi-tool .history-item:hover {
+    background-color: #f8f9fa;
+}
+
+.loan-emi-tool .history-actions {
+    margin-top: 1rem;
+}
+
+.loan-emi-tool .feature-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.loan-emi-tool .feature-list li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.loan-emi-tool .feature-list li:before {
+    content: "•";
+    color: #007bff;
+    position: absolute;
+    left: 0;
+}
+
+.loan-emi-tool .disclaimer {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .loan-emi-tool {
+        padding: 1rem;
+    }
+
+    .loan-emi-tool .card-body {
+        padding: 1rem;
+    }
+
+    .loan-emi-tool .result-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .loan-emi-tool .table-responsive {
+        margin-bottom: 1rem;
+    }
+
+    .loan-emi-tool .chart-container {
+        height: 250px;
+    }
+} 

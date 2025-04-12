@@ -1,0 +1,162 @@
+.markdown-converter {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.markdown-converter .card {
+    margin-bottom: 1.5rem;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.markdown-converter .card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    padding: 1rem;
+}
+
+.markdown-converter .card-body {
+    padding: 1.5rem;
+}
+
+.markdown-converter textarea {
+    min-height: 300px;
+    font-family: monospace;
+    resize: vertical;
+}
+
+.markdown-converter .btn-group {
+    margin-bottom: 1rem;
+}
+
+.markdown-converter .btn {
+    margin-right: 0.5rem;
+}
+
+.markdown-converter #htmlOutput {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    font-family: monospace;
+    white-space: pre-wrap;
+    min-height: 300px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.markdown-converter .preview-area {
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 0.25rem;
+    padding: 1.5rem;
+    min-height: 200px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.markdown-converter .preview-area h1,
+.markdown-converter .preview-area h2,
+.markdown-converter .preview-area h3,
+.markdown-converter .preview-area h4,
+.markdown-converter .preview-area h5,
+.markdown-converter .preview-area h6 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.markdown-converter .preview-area p {
+    margin-bottom: 1rem;
+}
+
+.markdown-converter .preview-area ul,
+.markdown-converter .preview-area ol {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+.markdown-converter .preview-area code {
+    background-color: #f8f9fa;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-family: monospace;
+}
+
+.markdown-converter .preview-area pre {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}
+
+.markdown-converter .preview-area blockquote {
+    border-left: 4px solid #dee2e6;
+    padding-left: 1rem;
+    margin-left: 0;
+    color: #6c757d;
+}
+
+.markdown-converter .preview-area table {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-collapse: collapse;
+}
+
+.markdown-converter .preview-area table th,
+.markdown-converter .preview-area table td {
+    padding: 0.75rem;
+    border: 1px solid #dee2e6;
+}
+
+.markdown-converter .preview-area table th {
+    background-color: #f8f9fa;
+}
+
+.markdown-converter .alert {
+    margin-top: 1rem;
+}
+
+.markdown-converter .tool-description {
+    margin-bottom: 2rem;
+    color: #6c757d;
+}
+
+.markdown-converter .feature-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.markdown-converter .feature-list li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.markdown-converter .feature-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #28a745;
+}
+
+@media (max-width: 768px) {
+    .markdown-converter {
+        padding: 1rem;
+    }
+    
+    .markdown-converter .card-body {
+        padding: 1rem;
+    }
+    
+    .markdown-converter .btn-group {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .markdown-converter .btn {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+} 

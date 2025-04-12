@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Character Counter - Online Tools</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="../../assets/css/tools/social/twitter-character-counter.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container twitter-character-counter">
+        <h1 class="text-center mb-4">Twitter Character Counter</h1>
+        
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="tweet-input-container">
+                    <textarea class="form-control" id="tweetInput" rows="5" 
+                              placeholder="Type or paste your tweet here..."></textarea>
+                    <div class="character-count">
+                        <span id="characterCount">0</span>
+                        <span>/280</span>
+                    </div>
+                </div>
+
+                <div class="options-container mt-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="includeUrl" checked>
+                        <label class="form-check-label" for="includeUrl">
+                            Include URL (23 characters)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="includeMedia" checked>
+                        <label class="form-check-label" for="includeMedia">
+                            Include Media (24 characters)
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <h3 class="card-title">Tweet Preview</h3>
+                <div class="tweet-preview" id="tweetPreview">
+                    <p class="preview-text">Your tweet will appear here...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">About Twitter Character Counter</h3>
+                <p class="card-text">
+                    This tool helps you count characters in your tweets, taking into account 
+                    Twitter's character limits and special rules for URLs and media attachments.
+                </p>
+                <h4>Features:</h4>
+                <ul>
+                    <li>Real-time character counting</li>
+                    <li>URL length calculation (23 characters)</li>
+                    <li>Media attachment length calculation (24 characters)</li>
+                    <li>Live tweet preview</li>
+                    <li>Responsive design for all devices</li>
+                </ul>
+                <h4>Twitter Character Limits:</h4>
+                <ul>
+                    <li>Maximum tweet length: 280 characters</li>
+                    <li>URLs count as 23 characters regardless of length</li>
+                    <li>Media attachments count as 24 characters</li>
+                    <li>Emojis count as 2 characters each</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/tools/social/twitter-character-counter.js"></script>
+</body>
+</html> 

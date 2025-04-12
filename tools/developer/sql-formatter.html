@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Formatter - Multi-Tools Hub</title>
+    <meta name="description" content="Format and beautify your SQL queries with this easy-to-use online tool. Supports proper indentation, keyword highlighting, and query validation.">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Tool-specific CSS -->
+    <link rel="stylesheet" href="../../assets/css/tools/developer/sql-formatter.css">
+</head>
+<body>
+    <!-- Header will be dynamically loaded here -->
+    <div id="header-container"></div>
+
+    <main class="container mt-4">
+        <div class="tool-container">
+            <h1 class="text-center mb-4">SQL Formatter</h1>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Input SQL</h5>
+                            <div class="mb-3">
+                                <textarea id="sqlInput" class="form-control" rows="12" placeholder="Paste your SQL query here..."></textarea>
+                            </div>
+                            <div class="btn-group" role="group">
+                                <button id="formatBtn" class="btn btn-primary">
+                                    <i class="fas fa-code"></i> Format
+                                </button>
+                                <button id="clearBtn" class="btn btn-danger">
+                                    <i class="fas fa-trash"></i> Clear
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Formatted Output</h5>
+                            <div id="formattingStatus" class="mb-2"></div>
+                            <pre id="sqlOutput" class="form-control" style="min-height: 300px; white-space: pre-wrap;"></pre>
+                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                <button id="copyBtn" class="btn btn-success">
+                                    <i class="fas fa-copy"></i> Copy to Clipboard
+                                </button>
+                                <div id="stats" class="text-muted small"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ad Section -->
+            <div class="ad-container text-center p-3 border rounded mt-4">
+                <p class="text-muted">Advertisement</p>
+            </div>
+
+            <!-- Tool Description -->
+            <div class="mt-4">
+                <h3>About This Tool</h3>
+                <p>This SQL formatter helps you beautify and validate your SQL queries. Features include:</p>
+                <ul>
+                    <li>Proper indentation and line breaks</li>
+                    <li>SQL keyword highlighting</li>
+                    <li>Query validation</li>
+                    <li>Consistent formatting</li>
+                    <li>Copy formatted SQL to clipboard</li>
+                </ul>
+                <h4>Supported SQL Features:</h4>
+                <ul>
+                    <li>SELECT statements</li>
+                    <li>INSERT statements</li>
+                    <li>UPDATE statements</li>
+                    <li>DELETE statements</li>
+                    <li>CREATE TABLE statements</li>
+                    <li>ALTER TABLE statements</li>
+                    <li>JOIN clauses</li>
+                    <li>WHERE clauses</li>
+                    <li>GROUP BY clauses</li>
+                    <li>ORDER BY clauses</li>
+                    <li>Subqueries</li>
+                    <li>Common Table Expressions (CTEs)</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer will be dynamically loaded here -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../../assets/js/main.js"></script>
+    <!-- Tool-specific JS -->
+    <script src="../../assets/js/tools/developer/sql-formatter.js"></script>
+</body>
+</html> 

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64 Encoder/Decoder - Multi-Tools Hub</title>
+    <meta name="description" content="Encode and decode text, files, and images to/from Base64 format. Supports multiple input types and provides instant results.">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Tool-specific CSS -->
+    <link rel="stylesheet" href="../../assets/css/tools/developer/base64-encoder-decoder.css">
+</head>
+<body>
+    <!-- Header will be dynamically loaded here -->
+    <div id="header-container"></div>
+
+    <main class="container mt-4">
+        <div class="base64-tool">
+            <h1 class="text-center mb-4">Base64 Encoder/Decoder</h1>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Input</h5>
+                            <div class="input-options mb-3">
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-outline-primary active" data-input-type="text">
+                                        <i class="fas fa-font"></i> Text
+                                    </button>
+                                    <button type="button" class="btn btn-outline-primary" data-input-type="file">
+                                        <i class="fas fa-file"></i> File
+                                    </button>
+                                    <button type="button" class="btn btn-outline-primary" data-input-type="image">
+                                        <i class="fas fa-image"></i> Image
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="input-content">
+                                <div class="text-input">
+                                    <textarea id="textInput" class="form-control" rows="10" placeholder="Enter text to encode or Base64 to decode..."></textarea>
+                                </div>
+                                <div class="file-input d-none">
+                                    <input type="file" id="fileInput" class="form-control">
+                                    <div class="file-info mt-2"></div>
+                                </div>
+                                <div class="image-input d-none">
+                                    <input type="file" id="imageInput" class="form-control" accept="image/*">
+                                    <div class="image-preview mt-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Output</h5>
+                            <div class="output-options mb-3">
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-outline-primary active" data-action="encode">
+                                        <i class="fas fa-lock"></i> Encode
+                                    </button>
+                                    <button type="button" class="btn btn-outline-primary" data-action="decode">
+                                        <i class="fas fa-unlock"></i> Decode
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="output-content">
+                                <textarea id="outputText" class="form-control" rows="10" readonly></textarea>
+                                <div class="output-actions mt-3">
+                                    <button type="button" id="copyBtn" class="btn btn-success">
+                                        <i class="fas fa-copy"></i> Copy
+                                    </button>
+                                    <button type="button" id="downloadBtn" class="btn btn-primary">
+                                        <i class="fas fa-download"></i> Download
+                                    </button>
+                                    <button type="button" id="clearBtn" class="btn btn-danger">
+                                        <i class="fas fa-trash"></i> Clear
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ad Section -->
+            <div class="ad-container text-center p-3 border rounded mt-4">
+                <p class="text-muted">Advertisement</p>
+            </div>
+
+            <!-- Tool Description -->
+            <div class="mt-4">
+                <h3>About This Tool</h3>
+                <p>This Base64 Encoder/Decoder tool helps you convert data between Base64 and its original format. Features include:</p>
+                <ul class="feature-list">
+                    <li>Text encoding and decoding</li>
+                    <li>File encoding and decoding</li>
+                    <li>Image encoding and decoding</li>
+                    <li>Copy to clipboard</li>
+                    <li>Download encoded/decoded content</li>
+                </ul>
+                <h4>Supported Input Types:</h4>
+                <ul class="feature-list">
+                    <li>Text: Plain text or Base64 encoded text</li>
+                    <li>Files: Any file type (PDF, DOC, ZIP, etc.)</li>
+                    <li>Images: Common image formats (JPG, PNG, GIF, etc.)</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer will be dynamically loaded here -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../../assets/js/main.js"></script>
+    <!-- Tool-specific JS -->
+    <script src="../../assets/js/tools/developer/base64.js"></script>
+</body>
+</html> 

@@ -1,0 +1,101 @@
+.htaccess-generator {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.htaccess-generator .card {
+    margin-bottom: 1.5rem;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.htaccess-generator .card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    padding: 1rem;
+}
+
+.htaccess-generator .card-body {
+    padding: 1.5rem;
+}
+
+.htaccess-generator .form-check {
+    margin-bottom: 1rem;
+}
+
+.htaccess-generator .form-select {
+    margin-bottom: 1rem;
+}
+
+.htaccess-generator textarea {
+    min-height: 150px;
+    font-family: monospace;
+}
+
+.htaccess-generator .btn-group {
+    margin-bottom: 1rem;
+}
+
+.htaccess-generator .btn {
+    margin-right: 0.5rem;
+}
+
+.htaccess-generator #htaccessOutput {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    font-family: monospace;
+    white-space: pre-wrap;
+    min-height: 200px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.htaccess-generator .alert {
+    margin-top: 1rem;
+}
+
+.htaccess-generator .tool-description {
+    margin-bottom: 2rem;
+    color: #6c757d;
+}
+
+.htaccess-generator .feature-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.htaccess-generator .feature-list li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.htaccess-generator .feature-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #28a745;
+}
+
+@media (max-width: 768px) {
+    .htaccess-generator {
+        padding: 1rem;
+    }
+    
+    .htaccess-generator .card-body {
+        padding: 1rem;
+    }
+    
+    .htaccess-generator .btn-group {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .htaccess-generator .btn {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+} 

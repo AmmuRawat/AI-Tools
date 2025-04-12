@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Minifier - Multi-Tools Hub</title>
+    <meta name="description" content="Minify your CSS code with this easy-to-use online tool. Remove comments, whitespace, and optimize your CSS for production.">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Tool-specific CSS -->
+    <link rel="stylesheet" href="../../assets/css/tools/developer/css-minifier.css">
+</head>
+<body>
+    <!-- Header will be dynamically loaded here -->
+    <div id="header-container"></div>
+
+    <main class="container mt-4">
+        <div class="tool-container">
+            <h1 class="text-center mb-4">CSS Minifier</h1>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Input CSS</h5>
+                            <div class="mb-3">
+                                <textarea id="cssInput" class="form-control" rows="12" placeholder="Paste your CSS here..."></textarea>
+                            </div>
+                            <div class="btn-group" role="group">
+                                <button id="minifyBtn" class="btn btn-primary">
+                                    <i class="fas fa-compress-alt"></i> Minify
+                                </button>
+                                <button id="clearBtn" class="btn btn-danger">
+                                    <i class="fas fa-trash"></i> Clear
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Minified Output</h5>
+                            <div id="minificationStatus" class="mb-2"></div>
+                            <pre id="cssOutput" class="form-control" style="min-height: 300px; white-space: pre-wrap;"></pre>
+                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                <button id="copyBtn" class="btn btn-success">
+                                    <i class="fas fa-copy"></i> Copy to Clipboard
+                                </button>
+                                <div id="stats" class="text-muted small"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ad Section -->
+            <div class="ad-container text-center p-3 border rounded mt-4">
+                <p class="text-muted">Advertisement</p>
+            </div>
+
+            <!-- Tool Description -->
+            <div class="mt-4">
+                <h3>About This Tool</h3>
+                <p>This CSS minifier helps you optimize your CSS code for production. Features include:</p>
+                <ul>
+                    <li>Remove comments and unnecessary whitespace</li>
+                    <li>Optimize CSS selectors and properties</li>
+                    <li>Compress color values</li>
+                    <li>Remove redundant properties</li>
+                    <li>Show compression statistics</li>
+                    <li>Copy minified CSS to clipboard</li>
+                </ul>
+                <h4>Optimization Features:</h4>
+                <ul>
+                    <li>Removes comments (/* ... */)</li>
+                    <li>Removes unnecessary whitespace and line breaks</li>
+                    <li>Optimizes color values (e.g., #FFFFFF → #fff)</li>
+                    <li>Removes trailing semicolons</li>
+                    <li>Removes redundant zero units (e.g., 0px → 0)</li>
+                    <li>Optimizes font-weight values</li>
+                    <li>Compresses margin/padding shorthand</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer will be dynamically loaded here -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../../assets/js/main.js"></script>
+    <!-- Tool-specific JS -->
+    <script src="../../assets/js/tools/developer/css-minifier.js"></script>
+</body>
+</html> 

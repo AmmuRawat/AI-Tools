@@ -1,0 +1,122 @@
+/* Global Styles */
+:root {
+    --primary-color: #4a6bff;
+    --primary-hover: #3a5bef;
+    --secondary-color: #6c757d;
+    --light-bg: #f8f9fa;
+    --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f7ff;
+    color: #333;
+}
+
+/* Category Header */
+.category-header h1 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.category-header p {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+}
+
+/* Tool Cards */
+.tool-card {
+    border: none;
+    border-radius: 15px;
+    transition: var(--transition);
+    background-color: white;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow);
+}
+
+.tool-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(74, 107, 255, 0.1);
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: var(--transition);
+}
+
+.tool-card:hover .tool-icon {
+    transform: scale(1.1);
+    background-color: rgba(74, 107, 255, 0.2);
+}
+
+.tool-card .card-title {
+    color: #333;
+    font-weight: 600;
+}
+
+.tool-card .card-text {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+.tool-card .btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.tool-card .btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .category-header h1 {
+        font-size: 2rem;
+    }
+
+    .category-header p {
+        font-size: 1rem;
+    }
+
+    .tool-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .tool-icon i {
+        font-size: 2rem !important;
+    }
+
+    .tool-card .card-title {
+        font-size: 1.25rem;
+    }
+
+    .tool-card .card-text {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .category-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .category-header p {
+        font-size: 0.9rem;
+    }
+
+    .tool-card {
+        margin-bottom: 1rem;
+    }
+} 

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Geolocation - Online Tools</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../../assets/css/tools/security/ip-geolocation.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header will be dynamically loaded here -->
+    <div id="header-container"></div>
+
+    <main class="container mt-4">
+        <div class="ip-geolocation">
+            <div class="tool-header text-center mb-5">
+                <h1 class="display-4 fw-bold">IP Geolocation</h1>
+                <p class="lead text-muted">Find the location and details of any IP address</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- IP Input Section -->
+                    <div class="card shadow-lg mb-4">
+                        <div class="card-body p-4">
+                            <form id="ipGeolocationForm">
+                                <div class="mb-4">
+                                    <label for="ipAddress" class="form-label">Enter IP Address</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-network-wired"></i>
+                                        </span>
+                                        <input type="text" class="form-control" id="ipAddress" placeholder="e.g., 8.8.8.8">
+                                        <button class="btn btn-outline-secondary" type="button" id="getMyIP">
+                                            <i class="fas fa-location-arrow me-2"></i>My IP
+                                        </button>
+                                    </div>
+                                    <div class="form-text">Leave blank to check your own IP address</div>
+                                </div>
+
+                                <!-- Lookup Button -->
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-search me-2"></i>Lookup IP
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Result Section -->
+                    <div class="card shadow-lg mb-4">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0">
+                                <i class="fas fa-map-marker-alt me-2"></i>IP Details
+                            </h5>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="result-container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="info-item mb-3">
+                                            <label class="text-muted">IP Address</label>
+                                            <p class="mb-0" id="resultIp"></p>
+                                        </div>
+                                        <div class="info-item mb-3">
+                                            <label class="text-muted">Location</label>
+                                            <p class="mb-0" id="resultLocation"></p>
+                                        </div>
+                                        <div class="info-item mb-3">
+                                            <label class="text-muted">ISP</label>
+                                            <p class="mb-0" id="resultIsp"></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="info-item mb-3">
+                                            <label class="text-muted">Timezone</label>
+                                            <p class="mb-0" id="resultTimezone"></p>
+                                        </div>
+                                        <div class="info-item mb-3">
+                                            <label class="text-muted">Organization</label>
+                                            <p class="mb-0" id="resultOrg"></p>
+                                        </div>
+                                        <div class="info-item mb-3">
+                                            <label class="text-muted">AS Number</label>
+                                            <p class="mb-0" id="resultAs"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Section -->
+                    <div class="card shadow-lg mb-4">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0">
+                                <i class="fas fa-globe me-2"></i>Location Map
+                            </h5>
+                        </div>
+                        <div class="card-body p-4">
+                            <div id="map" style="height: 400px; border-radius: 8px;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Information Section -->
+                    <div class="card shadow-lg">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0">
+                                <i class="fas fa-info-circle me-2"></i>About IP Geolocation
+                            </h5>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="info-content">
+                                <h6 class="mt-4">What is IP Geolocation?</h6>
+                                <p>IP Geolocation is the process of determining the physical location of an IP address. This information can include:</p>
+                                <ul>
+                                    <li>Country, region, and city</li>
+                                    <li>Latitude and longitude coordinates</li>
+                                    <li>Internet Service Provider (ISP)</li>
+                                    <li>Organization name</li>
+                                    <li>Timezone</li>
+                                </ul>
+                                <div class="alert alert-info mt-4">
+                                    <i class="fas fa-lightbulb me-2"></i>
+                                    <strong>Note:</strong> IP Geolocation data is approximate and may not always be accurate.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer will be dynamically loaded here -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Leaflet JS for Maps -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- Custom JS -->
+    <script src="../../assets/js/tools/security/ip-geolocation.js"></script>
+</body>
+</html> 

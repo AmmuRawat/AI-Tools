@@ -1,0 +1,108 @@
+.youtube-thumbnail-downloader {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Form Styles */
+#thumbnailForm .form-control {
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+}
+
+#thumbnailForm .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+#thumbnailForm .btn {
+    padding: 0.75rem 1.5rem;
+}
+
+/* Thumbnail Grid */
+#thumbnailGrid {
+    margin-top: 1rem;
+}
+
+.thumbnail-card {
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.thumbnail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.thumbnail-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 0.5rem;
+    color: white;
+}
+
+.thumbnail-quality {
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+}
+
+.thumbnail-dimensions {
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+.download-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+/* Error Container */
+#errorContainer {
+    border-radius: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .youtube-thumbnail-downloader {
+        padding: 1rem;
+    }
+
+    .thumbnail-card {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    #thumbnailForm .input-group {
+        flex-direction: column;
+    }
+
+    #thumbnailForm .btn {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+} 

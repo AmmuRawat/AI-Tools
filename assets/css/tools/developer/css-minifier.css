@@ -1,0 +1,53 @@
+#cssInput, #cssOutput {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 14px;
+    resize: vertical;
+}
+
+#cssOutput {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+.btn-group {
+    gap: 0.5rem;
+}
+
+#minificationStatus {
+    min-height: 60px;
+}
+
+.alert {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+#stats {
+    text-align: right;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    background-color: #f8f9fa;
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    #cssOutput, #stats {
+        background-color: #2d2d2d;
+        color: #f8f9fa;
+    }
+}
+
+/* Syntax highlighting for CSS properties */
+#cssOutput {
+    color: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+    #cssOutput {
+        color: #f8f9fa;
+    }
+} 

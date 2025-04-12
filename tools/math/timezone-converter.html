@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Zone Converter - Multi-Tools Hub</title>
+    <meta name="description" content="Convert time between different time zones with our easy-to-use time zone converter tool.">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Tool-specific CSS -->
+    <link rel="stylesheet" href="../../assets/css/tools/math/time-zone-converter.css">
+</head>
+<body>
+    <!-- Header will be dynamically loaded here -->
+    <div id="header-container"></div>
+
+    <main class="container mt-4">
+        <div class="time-zone-converter">
+            <h1 class="text-center mb-4">Time Zone Converter</h1>
+            
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <form id="timeZoneConverterForm">
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label for="date" class="form-label">Date</label>
+                                        <input type="date" class="form-control" id="date" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="time" class="form-label">Time</label>
+                                        <input type="time" class="form-control" id="time" required>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label for="fromTimeZone" class="form-label">From Time Zone</label>
+                                        <select class="form-select" id="fromTimeZone" required>
+                                            <!-- Time zones will be populated by JavaScript -->
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="toTimeZone" class="form-label">To Time Zone</label>
+                                        <select class="form-select" id="toTimeZone" required>
+                                            <!-- Time zones will be populated by JavaScript -->
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fas fa-exchange-alt"></i> Convert
+                                    </button>
+                                </div>
+                            </form>
+
+                            <div class="results mt-4">
+                                <h4>Conversion Result</h4>
+                                <div class="result-grid">
+                                    <div class="result-item">
+                                        <span class="result-label">Converted Date & Time</span>
+                                        <span class="result-value" id="convertedDateTime">-</span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="result-label">Time Difference</span>
+                                        <span class="result-value" id="timeDifference">-</span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="result-label">Daylight Saving</span>
+                                        <span class="result-value" id="daylightSaving">-</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="time-zone-info mt-4">
+                                <h4>Time Zone Information</h4>
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Time Zone</th>
+                                                <th>Current Time</th>
+                                                <th>UTC Offset</th>
+                                                <th>DST</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="timeZoneInfo">
+                                            <!-- Time zone info will be populated here -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Popular Time Zones</h5>
+                            <div class="popular-time-zones" id="popularTimeZones">
+                                <!-- Popular time zones will be populated here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Conversion History</h5>
+                            <div class="history-list" id="historyList"></div>
+                            <div class="history-actions mt-3">
+                                <button type="button" id="clearHistory" class="btn btn-danger">
+                                    <i class="fas fa-trash"></i> Clear History
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ad Section -->
+            <div class="ad-container text-center p-3 border rounded mt-4">
+                <p class="text-muted">Advertisement</p>
+            </div>
+
+            <!-- Tool Description -->
+            <div class="mt-4">
+                <h3>About This Tool</h3>
+                <p>This time zone converter helps you convert time between different time zones:</p>
+                <ul class="feature-list">
+                    <li>Convert between any time zones worldwide</li>
+                    <li>Account for daylight saving time (DST)</li>
+                    <li>View current times in different zones</li>
+                    <li>Quick access to popular time zones</li>
+                    <li>Conversion history with recall functionality</li>
+                </ul>
+                <h4>How to Use:</h4>
+                <ul class="feature-list">
+                    <li>Enter the date and time you want to convert</li>
+                    <li>Select the source time zone</li>
+                    <li>Choose the target time zone</li>
+                    <li>Click "Convert" to see the result</li>
+                    <li>View time zone information and popular zones</li>
+                </ul>
+                <div class="disclaimer mt-3">
+                    <p class="text-muted"><small>Note: Time zone conversions account for daylight saving time where applicable. Some time zones may have different DST rules.</small></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer will be dynamically loaded here -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../../assets/js/main.js"></script>
+    <!-- Tool-specific JS -->
+    <script src="../../assets/js/tools/math/timezone-converter.js"></script>
+</body>
+</html> 

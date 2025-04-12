@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Formatter & Validator - Multi-Tools Hub</title>
+    <meta name="description" content="Format, validate, and beautify your JSON data with this easy-to-use online tool. Supports minification and pretty printing.">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Tool-specific CSS -->
+    <link rel="stylesheet" href="../../assets/css/tools/developer/json-formatter.css">
+</head>
+<body>
+    <!-- Header will be dynamically loaded here -->
+    <div id="header-container"></div>
+
+    <main class="container mt-4">
+        <div class="tool-container">
+            <h1 class="text-center mb-4">JSON Formatter & Validator</h1>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Input JSON</h5>
+                            <div class="mb-3">
+                                <textarea id="jsonInput" class="form-control" rows="12" placeholder="Paste your JSON here..."></textarea>
+                            </div>
+                            <div class="btn-group" role="group">
+                                <button id="formatBtn" class="btn btn-primary">
+                                    <i class="fas fa-code"></i> Format
+                                </button>
+                                <button id="minifyBtn" class="btn btn-secondary">
+                                    <i class="fas fa-compress-alt"></i> Minify
+                                </button>
+                                <button id="clearBtn" class="btn btn-danger">
+                                    <i class="fas fa-trash"></i> Clear
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Formatted Output</h5>
+                            <div id="validationResult" class="mb-2"></div>
+                            <pre id="jsonOutput" class="form-control" style="min-height: 300px; white-space: pre-wrap;"></pre>
+                            <button id="copyBtn" class="btn btn-success mt-2">
+                                <i class="fas fa-copy"></i> Copy to Clipboard
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ad Section -->
+            <div class="ad-container text-center p-3 border rounded mt-4">
+                <p class="text-muted">Advertisement</p>
+            </div>
+
+            <!-- Tool Description -->
+            <div class="mt-4">
+                <h3>About This Tool</h3>
+                <p>This JSON formatter and validator helps you format, validate, and beautify your JSON data. Features include:</p>
+                <ul>
+                    <li>Format JSON with proper indentation and spacing</li>
+                    <li>Validate JSON syntax</li>
+                    <li>Minify JSON by removing unnecessary whitespace</li>
+                    <li>Copy formatted JSON to clipboard</li>
+                    <li>Clear visual feedback for valid/invalid JSON</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer will be dynamically loaded here -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../../assets/js/main.js"></script>
+    <!-- Tool-specific JS -->
+    <script src="../../assets/js/tools/developer/json-formatter.js"></script>
+</body>
+</html> 

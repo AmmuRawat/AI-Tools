@@ -1,0 +1,175 @@
+.time-zone-converter {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Card Styles */
+.time-zone-converter .card {
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.time-zone-converter .card-body {
+    padding: 1.5rem;
+}
+
+/* Form Styles */
+.time-zone-converter .form-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.time-zone-converter .form-control,
+.time-zone-converter .form-select {
+    border: 1px solid #dee2e6;
+    padding: 0.75rem;
+}
+
+.time-zone-converter .form-control:focus,
+.time-zone-converter .form-select:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Results Section */
+.time-zone-converter .results {
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+}
+
+.time-zone-converter .result-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.time-zone-converter .result-item {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.time-zone-converter .result-label {
+    display: block;
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-bottom: 0.25rem;
+}
+
+.time-zone-converter .result-value {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #212529;
+}
+
+/* Popular Time Zones */
+.time-zone-converter .popular-time-zones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.5rem;
+}
+
+.time-zone-converter .popular-time-zone-item {
+    background-color: #f8f9fa;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.time-zone-converter .popular-time-zone-item:hover {
+    background-color: #e9ecef;
+    transform: translateY(-2px);
+}
+
+.time-zone-converter .time-zone-code {
+    font-weight: 500;
+    color: #212529;
+}
+
+.time-zone-converter .time-zone-offset {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+/* History List */
+.time-zone-converter .history-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.time-zone-converter .history-item {
+    padding: 0.75rem;
+    border-bottom: 1px solid #dee2e6;
+    transition: background-color 0.2s ease;
+}
+
+.time-zone-converter .history-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Time Zone Info Table */
+.time-zone-converter .table {
+    margin-bottom: 0;
+}
+
+.time-zone-converter .table th {
+    background-color: #f8f9fa;
+    font-weight: 500;
+}
+
+.time-zone-converter .table td {
+    vertical-align: middle;
+}
+
+/* Feature List */
+.time-zone-converter .feature-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.time-zone-converter .feature-list li {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.time-zone-converter .feature-list li::before {
+    content: "✓";
+    color: #28a745;
+    margin-right: 0.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .time-zone-converter {
+        padding: 1rem;
+    }
+
+    .time-zone-converter .result-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .time-zone-converter .popular-time-zones {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Ad Container */
+.time-zone-converter .ad-container {
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+}
+
+/* Disclaimer */
+.time-zone-converter .disclaimer {
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-top: 1rem;
+} 

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Converter - Online Tools</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../../assets/css/tools/unit/energy-converter.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header will be dynamically loaded here -->
+    <div id="header-container"></div>
+
+    <main class="container mt-4">
+        <div class="energy-converter">
+            <h1 class="text-center mb-4">Energy Converter</h1>
+            
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <form id="energyConverterForm">
+                                <div class="row mb-3">
+                                    <div class="col-md-5">
+                                        <label for="fromValue" class="form-label">From</label>
+                                        <input type="number" class="form-control" id="fromValue" placeholder="Enter value">
+                                        <select class="form-select mt-2" id="fromUnit">
+                                            <option value="joule">Joule (J)</option>
+                                            <option value="kilojoule">Kilojoule (kJ)</option>
+                                            <option value="calorie">Calorie (cal)</option>
+                                            <option value="kilocalorie">Kilocalorie (kcal)</option>
+                                            <option value="watt-hour">Watt-hour (Wh)</option>
+                                            <option value="kilowatt-hour">Kilowatt-hour (kWh)</option>
+                                            <option value="electronvolt">Electronvolt (eV)</option>
+                                            <option value="british-thermal-unit">British Thermal Unit (BTU)</option>
+                                            <option value="foot-pound">Foot-pound (ft·lb)</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2 d-flex align-items-center justify-content-center">
+                                        <button type="button" class="btn btn-primary" id="swapUnits">
+                                            <i class="fas fa-exchange-alt"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <label for="toValue" class="form-label">To</label>
+                                        <input type="number" class="form-control" id="toValue" placeholder="Result" readonly>
+                                        <select class="form-select mt-2" id="toUnit">
+                                            <option value="joule">Joule (J)</option>
+                                            <option value="kilojoule">Kilojoule (kJ)</option>
+                                            <option value="calorie">Calorie (cal)</option>
+                                            <option value="kilocalorie">Kilocalorie (kcal)</option>
+                                            <option value="watt-hour">Watt-hour (Wh)</option>
+                                            <option value="kilowatt-hour">Kilowatt-hour (kWh)</option>
+                                            <option value="electronvolt">Electronvolt (eV)</option>
+                                            <option value="british-thermal-unit">British Thermal Unit (BTU)</option>
+                                            <option value="foot-pound">Foot-pound (ft·lb)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fas fa-exchange-alt"></i> Convert
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Common Energy Values -->
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5 class="mb-0">Common Energy Values</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row" id="commonEnergyValues">
+                                <!-- Common energy values will be dynamically loaded here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Conversion History -->
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0">Conversion History</h5>
+                            <button type="button" class="btn btn-sm btn-outline-danger" id="clearHistory">
+                                <i class="fas fa-trash"></i> Clear History
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <div id="historyList" class="history-list">
+                                <!-- History items will be dynamically loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer will be dynamically loaded here -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../../assets/js/tools/unit/energy-converter.js"></script>
+</body>
+</html> 

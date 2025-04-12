@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSL Certificate Checker - Online Tools</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../../assets/css/tools/security/ssl-checker.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header will be dynamically loaded here -->
+    <div id="header-container"></div>
+
+    <main class="container mt-4">
+        <div class="ssl-checker">
+            <div class="tool-header text-center mb-5">
+                <h1 class="display-4 fw-bold">SSL Certificate Checker</h1>
+                <p class="lead text-muted">Check SSL certificate details of any website</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- URL Input Section -->
+                    <div class="card shadow-lg mb-4">
+                        <div class="card-body p-4">
+                            <form id="sslCheckerForm">
+                                <div class="mb-4">
+                                    <label for="websiteUrl" class="form-label">Enter Website URL</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-globe"></i>
+                                        </span>
+                                        <input type="url" class="form-control" id="websiteUrl" placeholder="https://example.com" required>
+                                    </div>
+                                    <div class="form-text">Enter the full URL including https://</div>
+                                </div>
+
+                                <!-- Check Button -->
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-shield-alt me-2"></i>Check SSL Certificate
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Result Section -->
+                    <div class="card shadow-lg mb-4">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0">
+                                <i class="fas fa-certificate me-2"></i>Certificate Details
+                            </h5>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="result-container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="info-item mb-3">
+                                            <label class="text-muted">Domain</label>
+                                            <p class="mb-0" id="resultDomain"></p>
+                                        </div>
+                                        <div class="info-item mb-3">
+                                            <label class="text-muted">Issuer</label>
+                                            <p class="mb-0" id="resultIssuer"></p>
+                                        </div>
+                                        <div class="info-item mb-3">
+                                            <label class="text-muted">Valid From</label>
+                                            <p class="mb-0" id="resultValidFrom"></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="info-item mb-3">
+                                            <label class="text-muted">Expires On</label>
+                                            <p class="mb-0" id="resultExpiresOn"></p>
+                                        </div>
+                                        <div class="info-item mb-3">
+                                            <label class="text-muted">Days Remaining</label>
+                                            <p class="mb-0" id="resultDaysRemaining"></p>
+                                        </div>
+                                        <div class="info-item mb-3">
+                                            <label class="text-muted">Certificate Status</label>
+                                            <p class="mb-0" id="resultStatus"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate Chain Section -->
+                    <div class="card shadow-lg mb-4">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0">
+                                <i class="fas fa-link me-2"></i>Certificate Chain
+                            </h5>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="chain-container">
+                                <ul class="list-group" id="certificateChain">
+                                    <!-- Certificate chain items will be added here dynamically -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Information Section -->
+                    <div class="card shadow-lg">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0">
+                                <i class="fas fa-info-circle me-2"></i>About SSL Certificates
+                            </h5>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="info-content">
+                                <h6 class="mt-4">What is an SSL Certificate?</h6>
+                                <p>SSL (Secure Sockets Layer) certificates are digital certificates that authenticate a website's identity and enable an encrypted connection. They are essential for:</p>
+                                <ul>
+                                    <li>Securing online transactions</li>
+                                    <li>Protecting sensitive information</li>
+                                    <li>Building trust with visitors</li>
+                                    <li>Improving search engine rankings</li>
+                                    <li>Preventing cyber attacks</li>
+                                </ul>
+                                <div class="alert alert-info mt-4">
+                                    <i class="fas fa-lightbulb me-2"></i>
+                                    <strong>Tip:</strong> Always check SSL certificates before entering sensitive information on a website.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer will be dynamically loaded here -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../../assets/js/tools/security/ssl-checker.js"></script>
+</body>
+</html> 

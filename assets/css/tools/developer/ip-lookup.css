@@ -1,0 +1,133 @@
+.ip-lookup-tool {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.ip-lookup-tool .card {
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.ip-lookup-tool .card-body {
+    padding: 1.5rem;
+}
+
+.ip-lookup-tool .card-title {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.ip-lookup-tool .input-group {
+    margin-bottom: 1rem;
+}
+
+.ip-lookup-tool .form-control {
+    border-radius: 0.25rem;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+}
+
+.ip-lookup-tool .btn {
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+}
+
+.ip-lookup-tool .result-section {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.ip-lookup-tool .result-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.ip-lookup-tool .result-section h6 {
+    color: #666;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.ip-lookup-tool .result-item {
+    display: flex;
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
+.ip-lookup-tool .result-item:last-child {
+    margin-bottom: 0;
+}
+
+.ip-lookup-tool .result-item .label {
+    font-weight: 500;
+    color: #666;
+    min-width: 120px;
+    margin-right: 1rem;
+}
+
+.ip-lookup-tool .result-item .value {
+    color: #333;
+    word-break: break-all;
+}
+
+.ip-lookup-tool .result-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.ip-lookup-tool .result-actions .btn {
+    flex: 1;
+}
+
+.ip-lookup-tool .spinner-border {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+}
+
+.ip-lookup-tool .feature-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.ip-lookup-tool .feature-list li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.ip-lookup-tool .feature-list li:before {
+    content: "•";
+    color: #007bff;
+    position: absolute;
+    left: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .ip-lookup-tool {
+        padding: 1rem;
+    }
+
+    .ip-lookup-tool .card-body {
+        padding: 1rem;
+    }
+
+    .ip-lookup-tool .result-item {
+        flex-direction: column;
+    }
+
+    .ip-lookup-tool .result-item .label {
+        margin-bottom: 0.25rem;
+    }
+
+    .ip-lookup-tool .result-actions {
+        flex-direction: column;
+    }
+} 

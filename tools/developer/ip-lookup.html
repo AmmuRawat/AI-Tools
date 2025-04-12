@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Address Lookup - Multi-Tools Hub</title>
+    <meta name="description" content="Look up detailed information about any IP address, including location, ISP, and network details.">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Tool-specific CSS -->
+    <link rel="stylesheet" href="../../assets/css/tools/developer/ip-lookup.css">
+</head>
+<body>
+    <!-- Header will be dynamically loaded here -->
+    <div id="header-container"></div>
+
+    <main class="container mt-4">
+        <div class="ip-lookup-tool">
+            <h1 class="text-center mb-4">IP Address Lookup</h1>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">IP Address Input</h5>
+                            <div class="input-group mb-3">
+                                <input type="text" id="ipInput" class="form-control" placeholder="Enter IP address or domain">
+                                <button class="btn btn-primary" id="lookupBtn">
+                                    <i class="fas fa-search"></i> Lookup
+                                </button>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="myIpCheckbox">
+                                <label class="form-check-label" for="myIpCheckbox">
+                                    Use my IP address
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Results</h5>
+                            <div id="loadingSpinner" class="text-center d-none">
+                                <div class="spinner-border text-primary" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                                <p class="mt-2">Looking up IP information...</p>
+                            </div>
+                            <div id="resultsContainer" class="d-none">
+                                <div class="result-section">
+                                    <h6>IP Information</h6>
+                                    <div class="result-item">
+                                        <span class="label">IP Address:</span>
+                                        <span id="ipAddress" class="value"></span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="label">IP Version:</span>
+                                        <span id="ipVersion" class="value"></span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="label">Location:</span>
+                                        <span id="location" class="value"></span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="label">ISP:</span>
+                                        <span id="isp" class="value"></span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="label">Organization:</span>
+                                        <span id="organization" class="value"></span>
+                                    </div>
+                                </div>
+                                <div class="result-section">
+                                    <h6>IPv4 Details</h6>
+                                    <div class="result-item">
+                                        <span class="label">Network Class:</span>
+                                        <span id="networkClass" class="value"></span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="label">Private/Public:</span>
+                                        <span id="ipType" class="value"></span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="label">Reserved:</span>
+                                        <span id="reserved" class="value"></span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="label">Special Purpose:</span>
+                                        <span id="specialPurpose" class="value"></span>
+                                    </div>
+                                </div>
+                                <div class="result-section">
+                                    <h6>Network Details</h6>
+                                    <div class="result-item">
+                                        <span class="label">AS Number:</span>
+                                        <span id="asNumber" class="value"></span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="label">AS Name:</span>
+                                        <span id="asName" class="value"></span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="label">Hostname:</span>
+                                        <span id="hostname" class="value"></span>
+                                    </div>
+                                </div>
+                                <div class="result-section">
+                                    <h6>Geographic Information</h6>
+                                    <div class="result-item">
+                                        <span class="label">Country:</span>
+                                        <span id="country" class="value"></span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="label">Region:</span>
+                                        <span id="region" class="value"></span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="label">City:</span>
+                                        <span id="city" class="value"></span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="label">Postal Code:</span>
+                                        <span id="postalCode" class="value"></span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="label">Coordinates:</span>
+                                        <span id="coordinates" class="value"></span>
+                                    </div>
+                                </div>
+                                <div class="result-actions mt-3">
+                                    <button type="button" id="copyBtn" class="btn btn-success">
+                                        <i class="fas fa-copy"></i> Copy Results
+                                    </button>
+                                    <button type="button" id="clearBtn" class="btn btn-danger">
+                                        <i class="fas fa-trash"></i> Clear
+                                    </button>
+                                </div>
+                            </div>
+                            <div id="errorContainer" class="alert alert-danger d-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ad Section -->
+            <div class="ad-container text-center p-3 border rounded mt-4">
+                <p class="text-muted">Advertisement</p>
+            </div>
+
+            <!-- Tool Description -->
+            <div class="mt-4">
+                <h3>About This Tool</h3>
+                <p>This IP Address Lookup tool provides detailed information about any IP address or domain. Features include:</p>
+                <ul class="feature-list">
+                    <li>Look up any IP address or domain</li>
+                    <li>View detailed location information</li>
+                    <li>Get network and ISP details</li>
+                    <li>Access geographic coordinates</li>
+                    <li>Copy results to clipboard</li>
+                </ul>
+                <h4>Information Provided:</h4>
+                <ul class="feature-list">
+                    <li>IP address and hostname</li>
+                    <li>Geographic location (country, region, city)</li>
+                    <li>ISP and organization details</li>
+                    <li>Network information (AS number, AS name)</li>
+                    <li>Geographic coordinates</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer will be dynamically loaded here -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../../assets/js/main.js"></script>
+    <!-- Tool-specific JS -->
+    <script src="../../assets/js/tools/developer/ip-lookup.js"></script>
+</body>
+</html> 

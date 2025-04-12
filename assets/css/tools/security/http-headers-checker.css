@@ -1,0 +1,110 @@
+.http-headers-checker {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Form Styles */
+#headersCheckerForm .form-control {
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+}
+
+#headersCheckerForm .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+#headersCheckerForm .btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+}
+
+/* Table Styles */
+.table {
+    margin-bottom: 0;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+.table td {
+    word-break: break-word;
+    vertical-align: middle;
+}
+
+/* Security Status Badges */
+.security-status {
+    padding: 0.35rem 0.65rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.security-status.good {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.security-status.warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.security-status.bad {
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+/* Copy Button */
+#copyResult {
+    transition: all 0.3s ease;
+}
+
+#copyResult:hover {
+    transform: translateY(-2px);
+}
+
+/* Error Message */
+#errorContainer {
+    border-radius: 0.5rem;
+}
+
+/* Information Card */
+.card {
+    border-radius: 0.5rem;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.card-title {
+    color: #0d6efd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .http-headers-checker {
+        padding: 1rem;
+    }
+    
+    .table th, .table td {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    #headersCheckerForm .btn {
+        padding: 0.5rem 1rem;
+    }
+    
+    .security-status {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+    }
+} 

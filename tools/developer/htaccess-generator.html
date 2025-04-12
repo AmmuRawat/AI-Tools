@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.htaccess Generator - Multi-Tools Hub</title>
+    <meta name="description" content="Generate Apache .htaccess files with this easy-to-use online tool. Create redirects, security rules, and performance optimizations.">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Tool-specific CSS -->
+    <link rel="stylesheet" href="../../assets/css/tools/developer/htaccess-generator.css">
+</head>
+<body>
+    <!-- Header will be dynamically loaded here -->
+    <div id="header-container"></div>
+
+    <main class="container mt-4">
+        <div class="tool-container">
+            <h1 class="text-center mb-4">.htaccess Generator</h1>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Configuration Options</h5>
+                            <form id="htaccessForm">
+                                <!-- Security Options -->
+                                <div class="mb-3">
+                                    <h6>Security Options</h6>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="preventDirectoryListing" checked>
+                                        <label class="form-check-label" for="preventDirectoryListing">
+                                            Prevent Directory Listing
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="protectHtaccess" checked>
+                                        <label class="form-check-label" for="protectHtaccess">
+                                            Protect .htaccess File
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="disableServerSignature">
+                                        <label class="form-check-label" for="disableServerSignature">
+                                            Disable Server Signature
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Redirects -->
+                                <div class="mb-3">
+                                    <h6>Redirects</h6>
+                                    <div class="mb-2">
+                                        <label class="form-label">WWW to Non-WWW</label>
+                                        <select class="form-select" id="wwwRedirect">
+                                            <option value="none">No Redirect</option>
+                                            <option value="to-www">Redirect to www</option>
+                                            <option value="to-non-www">Redirect to non-www</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label">HTTP to HTTPS</label>
+                                        <select class="form-select" id="httpsRedirect">
+                                            <option value="none">No Redirect</option>
+                                            <option value="force-https">Force HTTPS</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Performance -->
+                                <div class="mb-3">
+                                    <h6>Performance</h6>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="enableGzip" checked>
+                                        <label class="form-check-label" for="enableGzip">
+                                            Enable GZIP Compression
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="enableBrowserCaching" checked>
+                                        <label class="form-check-label" for="enableBrowserCaching">
+                                            Enable Browser Caching
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Custom Rules -->
+                                <div class="mb-3">
+                                    <h6>Custom Rules</h6>
+                                    <textarea class="form-control" id="customRules" rows="4" placeholder="Add your custom .htaccess rules here..."></textarea>
+                                </div>
+
+                                <div class="btn-group" role="group">
+                                    <button type="button" id="generateBtn" class="btn btn-primary">
+                                        <i class="fas fa-code"></i> Generate
+                                    </button>
+                                    <button type="button" id="clearBtn" class="btn btn-danger">
+                                        <i class="fas fa-trash"></i> Clear
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Generated .htaccess</h5>
+                            <div id="generationStatus" class="mb-2"></div>
+                            <pre id="htaccessOutput" class="form-control" style="min-height: 300px; white-space: pre-wrap;"></pre>
+                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                <button id="copyBtn" class="btn btn-success">
+                                    <i class="fas fa-copy"></i> Copy to Clipboard
+                                </button>
+                                <button id="downloadBtn" class="btn btn-info">
+                                    <i class="fas fa-download"></i> Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ad Section -->
+            <div class="ad-container text-center p-3 border rounded mt-4">
+                <p class="text-muted">Advertisement</p>
+            </div>
+
+            <!-- Tool Description -->
+            <div class="mt-4">
+                <h3>About This Tool</h3>
+                <p>This .htaccess generator helps you create Apache configuration files. Features include:</p>
+                <ul>
+                    <li>Security configurations</li>
+                    <li>URL redirects (WWW, HTTPS)</li>
+                    <li>Performance optimizations</li>
+                    <li>Custom rule support</li>
+                    <li>Download and copy functionality</li>
+                </ul>
+                <h4>Generated Rules Include:</h4>
+                <ul>
+                    <li>Directory listing prevention</li>
+                    <li>.htaccess file protection</li>
+                    <li>Server signature hiding</li>
+                    <li>WWW to non-WWW redirects</li>
+                    <li>HTTP to HTTPS redirects</li>
+                    <li>GZIP compression</li>
+                    <li>Browser caching</li>
+                    <li>Custom rules integration</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer will be dynamically loaded here -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../../assets/js/main.js"></script>
+    <!-- Tool-specific JS -->
+    <script src="../../assets/js/tools/developer/htaccess-generator.js"></script>
+</body>
+</html> 

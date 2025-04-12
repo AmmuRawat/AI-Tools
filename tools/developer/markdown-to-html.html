@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown to HTML Converter - Multi-Tools Hub</title>
+    <meta name="description" content="Convert Markdown text to HTML with this easy-to-use online tool. Preview your formatted content in real-time.">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Tool-specific CSS -->
+    <link rel="stylesheet" href="../../assets/css/tools/developer/markdown-to-html.css">
+    <!-- Highlight.js for syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+</head>
+<body>
+    <!-- Header will be dynamically loaded here -->
+    <div id="header-container"></div>
+
+    <main class="container mt-4">
+        <div class="markdown-converter">
+            <h1 class="text-center mb-4">Markdown to HTML Converter</h1>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Markdown Input</h5>
+                            <div class="mb-3">
+                                <div class="btn-group mb-2" role="group">
+                                    <button type="button" class="btn btn-outline-secondary" data-insert="**bold**">
+                                        <i class="fas fa-bold"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-outline-secondary" data-insert="*italic*">
+                                        <i class="fas fa-italic"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-outline-secondary" data-insert="[link](url)">
+                                        <i class="fas fa-link"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-outline-secondary" data-insert="![alt](image.jpg)">
+                                        <i class="fas fa-image"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-outline-secondary" data-insert="# Heading">
+                                        <i class="fas fa-heading"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-outline-secondary" data-insert="```code```">
+                                        <i class="fas fa-code"></i>
+                                    </button>
+                                </div>
+                                <textarea id="markdownInput" class="form-control" rows="15" placeholder="Enter your Markdown text here..."></textarea>
+                            </div>
+                            <div class="btn-group" role="group">
+                                <button type="button" id="convertBtn" class="btn btn-primary">
+                                    <i class="fas fa-exchange-alt"></i> Convert
+                                </button>
+                                <button type="button" id="clearBtn" class="btn btn-danger">
+                                    <i class="fas fa-trash"></i> Clear
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">HTML Output</h5>
+                            <div id="conversionStatus" class="mb-2"></div>
+                            <div class="btn-group mb-2" role="group">
+                                <button type="button" id="copyBtn" class="btn btn-success">
+                                    <i class="fas fa-copy"></i> Copy HTML
+                                </button>
+                                <button type="button" id="downloadBtn" class="btn btn-info">
+                                    <i class="fas fa-download"></i> Download
+                                </button>
+                            </div>
+                            <div id="htmlOutput" class="form-control" style="min-height: 300px; overflow-y: auto;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Preview Section -->
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">Preview</h5>
+                    <div id="previewOutput" class="preview-area"></div>
+                </div>
+            </div>
+
+            <!-- Ad Section -->
+            <div class="ad-container text-center p-3 border rounded mt-4">
+                <p class="text-muted">Advertisement</p>
+            </div>
+
+            <!-- Tool Description -->
+            <div class="mt-4">
+                <h3>About This Tool</h3>
+                <p>This Markdown to HTML converter helps you transform your Markdown text into HTML. Features include:</p>
+                <ul class="feature-list">
+                    <li>Real-time conversion</li>
+                    <li>Quick formatting buttons</li>
+                    <li>HTML preview</li>
+                    <li>Copy to clipboard</li>
+                    <li>Download HTML file</li>
+                </ul>
+                <h4>Supported Markdown Elements:</h4>
+                <ul class="feature-list">
+                    <li>Headings (#, ##, ###)</li>
+                    <li>Bold and italic text</li>
+                    <li>Lists (ordered and unordered)</li>
+                    <li>Links and images</li>
+                    <li>Code blocks</li>
+                    <li>Blockquotes</li>
+                    <li>Tables</li>
+                    <li>Horizontal rules</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer will be dynamically loaded here -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Highlight.js for syntax highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../../assets/js/main.js"></script>
+    <!-- Tool-specific JS -->
+    <script src="../../assets/js/tools/developer/markdown-to-html.js"></script>
+</body>
+</html> 

@@ -1,0 +1,160 @@
+/* Global Styles */
+:root {
+    --primary-color: #4a6bff;
+    --primary-hover: #3a5bef;
+    --secondary-color: #6c757d;
+    --light-bg: #f8f9fa;
+    --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f7ff;
+    color: #333;
+}
+
+/* Tool Header */
+.tool-header h1 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.tool-header p {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow);
+}
+
+.card-header {
+    border-radius: 15px 15px 0 0 !important;
+    padding: 1rem;
+}
+
+/* Form Styles */
+#md5HashForm .form-control,
+#md5HashForm .form-select {
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+#md5HashForm .form-control:focus,
+#md5HashForm .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(74, 107, 255, 0.25);
+}
+
+#md5HashForm textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* File Input */
+#fileInput {
+    padding: 0.5rem;
+}
+
+#fileInput::-webkit-file-upload-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+#fileInput::-webkit-file-upload-button:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Result Section */
+.result-container {
+    background-color: var(--light-bg);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+#hashResult {
+    font-family: monospace;
+    font-size: 1rem;
+    background-color: white;
+}
+
+#copyHash {
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+#copyHash:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Information Section */
+.info-content p {
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+.info-content ul {
+    padding-left: 1.5rem;
+}
+
+.info-content li {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.alert {
+    border-radius: 10px;
+    border: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tool-header h1 {
+        font-size: 2rem;
+    }
+
+    .tool-header p {
+        font-size: 1rem;
+    }
+
+    #md5HashForm .form-control,
+    #md5HashForm .form-select {
+        font-size: 0.9rem;
+    }
+
+    .card {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .tool-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .tool-header p {
+        font-size: 0.9rem;
+    }
+
+    #md5HashForm textarea {
+        min-height: 100px;
+    }
+} 

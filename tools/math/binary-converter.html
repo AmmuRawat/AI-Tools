@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Converter - Multi-Tools Hub</title>
+    <meta name="description" content="Convert between binary, decimal, hexadecimal, and octal numbers with our easy-to-use binary converter tool.">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Tool-specific CSS -->
+    <link rel="stylesheet" href="../../assets/css/tools/math/binary-converter.css">
+</head>
+<body>
+    <!-- Header will be dynamically loaded here -->
+    <div id="header-container"></div>
+
+    <main class="container mt-4">
+        <div class="binary-converter">
+            <h1 class="text-center mb-4">Binary Converter</h1>
+            
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <form id="binaryConverterForm">
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label for="inputType" class="form-label">Input Type</label>
+                                        <select class="form-select" id="inputType" required>
+                                            <option value="binary">Binary</option>
+                                            <option value="decimal">Decimal</option>
+                                            <option value="hexadecimal">Hexadecimal</option>
+                                            <option value="octal">Octal</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="inputValue" class="form-label">Input Value</label>
+                                        <input type="text" class="form-control" id="inputValue" required
+                                               placeholder="Enter a number">
+                                    </div>
+                                </div>
+                                
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fas fa-exchange-alt"></i> Convert
+                                    </button>
+                                </div>
+                            </form>
+
+                            <div class="results mt-4">
+                                <h4>Conversion Results</h4>
+                                <div class="result-grid">
+                                    <div class="result-item">
+                                        <span class="result-label">Binary</span>
+                                        <span class="result-value" id="binaryResult">-</span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="result-label">Decimal</span>
+                                        <span class="result-value" id="decimalResult">-</span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="result-label">Hexadecimal</span>
+                                        <span class="result-value" id="hexResult">-</span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="result-label">Octal</span>
+                                        <span class="result-value" id="octalResult">-</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bit-operations mt-4">
+                                <h4>Bit Operations</h4>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="bitOperation" class="form-label">Operation</label>
+                                            <select class="form-select" id="bitOperation">
+                                                <option value="and">AND</option>
+                                                <option value="or">OR</option>
+                                                <option value="xor">XOR</option>
+                                                <option value="not">NOT</option>
+                                                <option value="shiftLeft">Shift Left</option>
+                                                <option value="shiftRight">Shift Right</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="secondOperand" class="form-label">Second Operand</label>
+                                            <input type="text" class="form-control" id="secondOperand"
+                                                   placeholder="Enter second number">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button type="button" class="btn btn-secondary" id="performBitOperation">
+                                        <i class="fas fa-calculator"></i> Perform Operation
+                                    </button>
+                                </div>
+                                <div class="result-item mt-3">
+                                    <span class="result-label">Operation Result</span>
+                                    <span class="result-value" id="bitOperationResult">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Common Values</h5>
+                            <div class="common-values" id="commonValues">
+                                <!-- Common values will be populated here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Conversion History</h5>
+                            <div class="history-list" id="historyList"></div>
+                            <div class="history-actions mt-3">
+                                <button type="button" id="clearHistory" class="btn btn-danger">
+                                    <i class="fas fa-trash"></i> Clear History
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ad Section -->
+            <div class="ad-container text-center p-3 border rounded mt-4">
+                <p class="text-muted">Advertisement</p>
+            </div>
+
+            <!-- Tool Description -->
+            <div class="mt-4">
+                <h3>About This Tool</h3>
+                <p>This binary converter helps you convert between different number systems:</p>
+                <ul class="feature-list">
+                    <li>Convert between binary, decimal, hexadecimal, and octal</li>
+                    <li>Perform bitwise operations (AND, OR, XOR, NOT)</li>
+                    <li>Bit shifting operations</li>
+                    <li>Quick access to common values</li>
+                    <li>Conversion history with recall functionality</li>
+                </ul>
+                <h4>How to Use:</h4>
+                <ul class="feature-list">
+                    <li>Select the input number system (binary, decimal, etc.)</li>
+                    <li>Enter the number you want to convert</li>
+                    <li>Click "Convert" to see results in all formats</li>
+                    <li>Use bit operations for advanced calculations</li>
+                    <li>View conversion history and common values</li>
+                </ul>
+                <div class="disclaimer mt-3">
+                    <p class="text-muted"><small>Note: Binary numbers should be entered without spaces. Hexadecimal numbers can be entered with or without the '0x' prefix.</small></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer will be dynamically loaded here -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../../assets/js/main.js"></script>
+    <!-- Tool-specific JS -->
+    <script src="../../assets/js/tools/math/binary-converter.js"></script>
+</body>
+</html> 

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator - Multi-Tools Hub</title>
+    <meta name="description" content="Calculate tips and split bills easily with our tip calculator tool.">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Tool-specific CSS -->
+    <link rel="stylesheet" href="../../assets/css/tools/math/tip-calculator.css">
+</head>
+<body>
+    <!-- Header will be dynamically loaded here -->
+    <div id="header-container"></div>
+
+    <main class="container mt-4">
+        <div class="tip-calculator">
+            <h1 class="text-center mb-4">Tip Calculator</h1>
+            
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <form id="tipCalculatorForm">
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label for="billAmount" class="form-label">Bill Amount</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text">$</span>
+                                            <input type="number" class="form-control" id="billAmount" 
+                                                   placeholder="0.00" step="0.01" min="0" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="tipPercentage" class="form-label">Tip Percentage</label>
+                                        <div class="input-group">
+                                            <input type="number" class="form-control" id="tipPercentage" 
+                                                   placeholder="15" min="0" max="100" required>
+                                            <span class="input-group-text">%</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label for="numberOfPeople" class="form-label">Number of People</label>
+                                        <input type="number" class="form-control" id="numberOfPeople" 
+                                               placeholder="1" min="1" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="roundUp" class="form-label">Round Up To</label>
+                                        <select class="form-select" id="roundUp">
+                                            <option value="0">No Rounding</option>
+                                            <option value="1">Nearest Dollar</option>
+                                            <option value="5">Nearest $5</option>
+                                            <option value="10">Nearest $10</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fas fa-calculator"></i> Calculate
+                                    </button>
+                                </div>
+                            </form>
+
+                            <div class="results mt-4">
+                                <h4>Results</h4>
+                                <div class="result-grid">
+                                    <div class="result-item">
+                                        <span class="result-label">Total Bill</span>
+                                        <span class="result-value" id="totalBill">$0.00</span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="result-label">Tip Amount</span>
+                                        <span class="result-value" id="tipAmount">$0.00</span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="result-label">Total with Tip</span>
+                                        <span class="result-value" id="totalWithTip">$0.00</span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="result-label">Per Person</span>
+                                        <span class="result-value" id="perPerson">$0.00</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="quick-tips mt-4">
+                                <h4>Quick Tip Percentages</h4>
+                                <div class="quick-tip-buttons">
+                                    <button type="button" class="btn btn-outline-secondary" data-tip="10">10%</button>
+                                    <button type="button" class="btn btn-outline-secondary" data-tip="15">15%</button>
+                                    <button type="button" class="btn btn-outline-secondary" data-tip="18">18%</button>
+                                    <button type="button" class="btn btn-outline-secondary" data-tip="20">20%</button>
+                                    <button type="button" class="btn btn-outline-secondary" data-tip="25">25%</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Tip History</h5>
+                            <div class="history-list" id="historyList"></div>
+                            <div class="history-actions mt-3">
+                                <button type="button" id="clearHistory" class="btn btn-danger">
+                                    <i class="fas fa-trash"></i> Clear History
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Common Bill Amounts</h5>
+                            <div class="common-amounts" id="commonAmounts">
+                                <!-- Common amounts will be populated here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ad Section -->
+            <div class="ad-container text-center p-3 border rounded mt-4">
+                <p class="text-muted">Advertisement</p>
+            </div>
+
+            <!-- Tool Description -->
+            <div class="mt-4">
+                <h3>About This Tool</h3>
+                <p>This tip calculator helps you quickly calculate tips and split bills:</p>
+                <ul class="feature-list">
+                    <li>Calculate tips based on bill amount and percentage</li>
+                    <li>Split bills among multiple people</li>
+                    <li>Round up to nearest dollar or custom amount</li>
+                    <li>Quick access to common tip percentages</li>
+                    <li>Save and view calculation history</li>
+                </ul>
+                <h4>How to Use:</h4>
+                <ul class="feature-list">
+                    <li>Enter the bill amount</li>
+                    <li>Select tip percentage or use quick tip buttons</li>
+                    <li>Enter number of people to split the bill</li>
+                    <li>Choose rounding option if needed</li>
+                    <li>Click "Calculate" to see results</li>
+                </ul>
+                <div class="disclaimer mt-3">
+                    <p class="text-muted"><small>Note: All calculations are done in real-time. The tool supports both decimal and whole number inputs.</small></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer will be dynamically loaded here -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../../assets/js/main.js"></script>
+    <!-- Tool-specific JS -->
+    <script src="../../assets/js/tools/math/tip-calculator.js"></script>
+</body>
+</html> 

@@ -1,0 +1,181 @@
+.tip-calculator {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Card Styles */
+.tip-calculator .card {
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.tip-calculator .card-body {
+    padding: 1.5rem;
+}
+
+/* Form Styles */
+.tip-calculator .form-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.tip-calculator .form-control,
+.tip-calculator .form-select {
+    border: 1px solid #dee2e6;
+    padding: 0.75rem;
+}
+
+.tip-calculator .form-control:focus,
+.tip-calculator .form-select:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.tip-calculator .input-group-text {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+}
+
+/* Results Section */
+.tip-calculator .results {
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+}
+
+.tip-calculator .result-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.tip-calculator .result-item {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.tip-calculator .result-label {
+    display: block;
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-bottom: 0.25rem;
+}
+
+.tip-calculator .result-value {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #212529;
+}
+
+/* Quick Tips Section */
+.tip-calculator .quick-tips {
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.tip-calculator .quick-tip-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.tip-calculator .quick-tip-buttons .btn {
+    flex: 1;
+    min-width: 80px;
+}
+
+/* Common Amounts */
+.tip-calculator .common-amounts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 0.5rem;
+}
+
+.tip-calculator .common-amount-item {
+    background-color: #f8f9fa;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.tip-calculator .common-amount-item:hover {
+    background-color: #e9ecef;
+    transform: translateY(-2px);
+}
+
+/* History List */
+.tip-calculator .history-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.tip-calculator .history-item {
+    padding: 0.75rem;
+    border-bottom: 1px solid #dee2e6;
+    transition: background-color 0.2s ease;
+}
+
+.tip-calculator .history-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Feature List */
+.tip-calculator .feature-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.tip-calculator .feature-list li {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.tip-calculator .feature-list li::before {
+    content: "✓";
+    color: #28a745;
+    margin-right: 0.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .tip-calculator {
+        padding: 1rem;
+    }
+
+    .tip-calculator .result-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tip-calculator .quick-tip-buttons {
+        flex-direction: column;
+    }
+
+    .tip-calculator .quick-tip-buttons .btn {
+        width: 100%;
+    }
+}
+
+/* Ad Container */
+.tip-calculator .ad-container {
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+}
+
+/* Disclaimer */
+.tip-calculator .disclaimer {
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-top: 1rem;
+} 

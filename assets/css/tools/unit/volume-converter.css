@@ -1,0 +1,104 @@
+.volume-converter {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Form Styles */
+#volumeConverterForm .form-control,
+#volumeConverterForm .form-select {
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+}
+
+#volumeConverterForm .form-control:focus,
+#volumeConverterForm .form-select:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+#swapUnits {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+#swapUnits:hover {
+    transform: rotate(180deg);
+}
+
+/* Common Volumes */
+.common-volume-item {
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.common-volume-item:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.common-volume-item .volume-value {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.common-volume-item .volume-unit {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+/* History List */
+.history-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.history-item {
+    padding: 0.75rem;
+    border-bottom: 1px solid #dee2e6;
+    transition: background-color 0.3s ease;
+}
+
+.history-item:last-child {
+    border-bottom: none;
+}
+
+.history-item:hover {
+    background-color: #f8f9fa;
+}
+
+.history-item .conversion {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.history-item .timestamp {
+    font-size: 0.75rem;
+    color: #6c757d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .volume-converter {
+        padding: 1rem;
+    }
+    
+    #swapUnits {
+        margin: 1rem 0;
+    }
+    
+    .common-volume-item {
+        margin-bottom: 0.5rem;
+    }
+} 

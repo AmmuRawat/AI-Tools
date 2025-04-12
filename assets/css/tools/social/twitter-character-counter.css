@@ -1,0 +1,124 @@
+.twitter-character-counter {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Tweet Input Container */
+.tweet-input-container {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+#tweetInput {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    resize: vertical;
+    min-height: 120px;
+    border: 1px solid #dee2e6;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#tweetInput:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.character-count {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+/* Options Container */
+.options-container {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form-check-input {
+    width: 1.2em;
+    height: 1.2em;
+    margin-top: 0;
+}
+
+.form-check-label {
+    font-size: 0.875rem;
+    color: #495057;
+}
+
+/* Tweet Preview */
+.tweet-preview {
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    min-height: 100px;
+}
+
+.preview-text {
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+.card-text {
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .twitter-character-counter {
+        padding: 1rem;
+    }
+    
+    .options-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+}
+
+/* Character Count Colors */
+#characterCount {
+    font-weight: bold;
+}
+
+#characterCount.warning {
+    color: #ffc107;
+}
+
+#characterCount.danger {
+    color: #dc3545;
+} 

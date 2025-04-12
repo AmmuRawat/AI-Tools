@@ -1,0 +1,64 @@
+#sqlInput, #sqlOutput {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 14px;
+    resize: vertical;
+}
+
+#sqlOutput {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+.btn-group {
+    gap: 0.5rem;
+}
+
+#formattingStatus {
+    min-height: 60px;
+}
+
+.alert {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+#stats {
+    text-align: right;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    background-color: #f8f9fa;
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+}
+
+/* SQL keyword highlighting */
+.sql-keyword {
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    #sqlOutput, #stats {
+        background-color: #2d2d2d;
+        color: #f8f9fa;
+    }
+
+    .sql-keyword {
+        color: #4dabf7;
+    }
+}
+
+/* Syntax highlighting for SQL */
+#sqlOutput {
+    color: #333;
+    line-height: 1.5;
+}
+
+@media (prefers-color-scheme: dark) {
+    #sqlOutput {
+        color: #f8f9fa;
+    }
+} 
